@@ -1,0 +1,11 @@
+digraph "Dominator tree for '_Z9countDownv' function" {
+	label="Dominator tree for '_Z9countDownv' function";
+
+	Node0x562a2ca051b0 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  store i32 0, i32* %1, align 4\l  br label %2\l}"];
+	Node0x562a2ca051b0 -> Node0x562a2ca05600;
+	Node0x562a2ca05600 [shape=record,label="{%2:\l2:                                                \l  %3 = load i32, i32* %1, align 4\l  %4 = icmp slt i32 %3, 10\l  br i1 %4, label %5, label %8\l}"];
+	Node0x562a2ca05600 -> Node0x562a2ca05640;
+	Node0x562a2ca05600 -> Node0x562a2ca05680;
+	Node0x562a2ca05640 [shape=record,label="{%5:\l5:                                                \l  %6 = load i32, i32* %1, align 4\l  %7 = add nsw i32 %6, 1\l  store i32 %7, i32* %1, align 4\l  br label %2\l}"];
+	Node0x562a2ca05680 [shape=record,label="{%8:\l8:                                                \l  ret void\l}"];
+}
