@@ -1,0 +1,2 @@
+# LLVM Exercise - Introduction to LLVM
+Modified from the [example code](http://www.mshah.io/LLVM/llvm_6_3_19.zip) for [Introduction to LLVM](http://www.mshah.io/LLVM/NortheasternMITIntroduction%20to%20LLVM.pdf) by [Mike Shah](http://www.mshah.io/) in 2019 Northeastern+MIT LLVM Seminar.
