@@ -125,8 +125,8 @@ namespace {
         // Because we instrument a .ll file before attaching our actually instrumentation files (a separate .ll)
         // we need to have the function signature ready to go. (One problem is LLVM creates arguments lazily, so we
         // would not know about them, but by doing this we avoid that problem.)
-        void setupHooks(StringRef InstrumentingFunctionName, Module &M) {
-            auto &Context = M.getContext();
+        static void setupHooks(StringRef InstrumentingFunctionName, Module &M) {
+            LLVMContext &Context = M.getContext();
 
             Type *voidTy = Type::getVoidTy(Context);
             Type *intTy = Type::getInt32Ty(Context);
@@ -137,7 +137,8 @@ namespace {
 
         }
 
-        void InstrumentEnterFunction(StringRef InstrumentingFunctionName, Function &FunctionToInstrument, Module &M) {
+        static void
+        InstrumentEnterFunction(StringRef InstrumentingFunctionName, Function &FunctionToInstrument, Module &M) {
             // Create the actual function
             // If we have a function already, then the below is very useful
             //
@@ -147,7 +148,7 @@ namespace {
             // Both methods will allow us to then modify the function arguments.
             //
             // Build out the function type
-            auto &Context = M.getContext();
+            LLVMContext &Context = M.getContext();
             // The functions return type
             Type *voidTy = Type::getVoidTy(Context);
             // The start of our parameters
