@@ -37,3 +37,4 @@
 # JetBrains config files
 .idea/
 cmake-build-debug/
+/CMakeLists.txt
