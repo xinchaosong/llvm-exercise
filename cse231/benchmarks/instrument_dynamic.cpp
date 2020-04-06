@@ -18,7 +18,7 @@ void __count(const char *opcodeName) {
     }
 }
 
-void __print_result() {
+void __printResult() {
     for (auto &pair: *opcodeMap) {
         printf("%s\t%u\n", pair.first.c_str(), pair.second);
     }

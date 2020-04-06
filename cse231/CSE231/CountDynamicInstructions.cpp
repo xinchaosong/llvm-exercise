@@ -14,8 +14,8 @@
 using namespace llvm;
 
 #define DEBUG_TYPE "count-dynamic-instructions"
-#define COUNT_FN "_Z7__countPKc"
-#define PRINT_FN "_Z14__print_resultv"
+#define COUNT_TAKEN_FN "_Z7__countPKc"
+#define RESULT_FN "_Z13__printResultv"
 
 namespace {
     struct CountDynamicInstructions : public ModulePass {
@@ -23,13 +23,14 @@ namespace {
         CountDynamicInstructions() : ModulePass(ID) {}
 
         bool runOnModule(Module &M) override {
+            DenseMap<StringRef, Value *> opcodeNameMap;
             setupHookCount(M);
             setupHookPrint(M);
 
             Module::FunctionListType &functions = M.getFunctionList();
             for (Function &F : functions) {
                 // Ignore our instrumentation function
-                if (COUNT_FN == F.getName() || PRINT_FN == F.getName()) {
+                if (COUNT_TAKEN_FN == F.getName() || RESULT_FN == F.getName()) {
                     continue;
                 }
 
@@ -41,7 +42,13 @@ namespace {
                     }
 
                     for (StringRef opcodeName : opcodeNameVec) {
-                        InstrumentEnterCount(opcodeName, bb, M);
+
+                        if (!opcodeNameMap.count(opcodeName)) {
+                            IRBuilder<> builder(&bb);
+                            opcodeNameMap[opcodeName] = builder.CreateGlobalStringPtr(opcodeName, opcodeName);
+                        }
+
+                        InstrumentEnterCount(opcodeNameMap[opcodeName], bb, M);
                     }
                 }
 
@@ -59,7 +66,7 @@ namespace {
             Type *voidTy = Type::getVoidTy(Context);
 
             FunctionType *funcTy = FunctionType::get(voidTy, {}, false);
-            Function::Create(funcTy, llvm::GlobalValue::ExternalLinkage)->setName(PRINT_FN);
+            Function::Create(funcTy, llvm::GlobalValue::ExternalLinkage)->setName(RESULT_FN);
         }
 
         static void setupHookCount(Module &M) {
@@ -69,7 +76,7 @@ namespace {
             Type *ptrTy = Type::getInt8PtrTy(Context);
 
             FunctionType *funcTy = FunctionType::get(voidTy, ptrTy, false);
-            Function::Create(funcTy, llvm::GlobalValue::ExternalLinkage)->setName(COUNT_FN);
+            Function::Create(funcTy, llvm::GlobalValue::ExternalLinkage)->setName(COUNT_TAKEN_FN);
         }
 
         static void InstrumentEnterPrint(Function &FunctionToInstrument, Module &M) {
@@ -78,7 +85,7 @@ namespace {
             Type *voidTy = Type::getVoidTy(Context);
 
             FunctionType *funcTy = FunctionType::get(voidTy, {}, false);
-            FunctionCallee hook = M.getOrInsertFunction(PRINT_FN, funcTy);
+            FunctionCallee hook = M.getOrInsertFunction(RESULT_FN, funcTy);
 
             BasicBlock *BB = &FunctionToInstrument.back();
             Instruction *I = &BB->back();
@@ -86,22 +93,18 @@ namespace {
             CallInst::Create(hook)->insertBefore(I);
         }
 
-        static void InstrumentEnterCount(StringRef opcodeName, BasicBlock &blockToInstrument, Module &M) {
+        static void InstrumentEnterCount(Value* opcodeValue, BasicBlock &blockToInstrument, Module &M) {
             LLVMContext &Context = M.getContext();
 
             Type *voidTy = Type::getVoidTy(Context);
             Type *ptrTy = Type::getInt8PtrTy(Context);
 
             FunctionType *funcTy = FunctionType::get(voidTy, ptrTy, false);
-            FunctionCallee hook = M.getOrInsertFunction(COUNT_FN, funcTy);
+            FunctionCallee hook = M.getOrInsertFunction(COUNT_TAKEN_FN, funcTy);
 
-            IRBuilder<> builder(&blockToInstrument);
-            Value *opcodeValue = builder.CreateGlobalStringPtr(opcodeName, opcodeName);
+            Instruction *I = &blockToInstrument.back();
 
-            std::vector<Value *> args;
-            args.push_back(opcodeValue);
-
-            CallInst::Create(hook, args)->insertBefore(&blockToInstrument.back());
+            CallInst::Create(hook, opcodeValue)->insertBefore(I);
         }
     };
 } // namespace

@@ -1,5 +1,5 @@
-; ModuleID = 'instrumentation.cpp'
-source_filename = "instrumentation.cpp"
+; ModuleID = 'instrument_dynamic.cpp'
+source_filename = "instrument_dynamic.cpp"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
@@ -525,7 +525,7 @@ define linkonce_odr dso_local dereferenceable(4) i32* @_ZNSt3mapINSt7__cxx1112ba
 }
 
 ; Function Attrs: noinline optnone uwtable
-define dso_local void @_Z14__print_resultv() #0 {
+define dso_local void @_Z13__printResultv() #0 {
   %1 = alloca %"class.std::map"*, align 8
   %2 = alloca %"struct.std::_Rb_tree_iterator", align 8
   %3 = alloca %"struct.std::_Rb_tree_iterator", align 8
