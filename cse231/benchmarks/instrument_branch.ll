@@ -27,7 +27,7 @@ target triple = "x86_64-unknown-linux-gnu"
 %"class.std::tuple" = type { %"struct.std::_Tuple_impl" }
 %"struct.std::_Tuple_impl" = type { %"struct.std::_Head_base" }
 %"struct.std::_Head_base" = type { i8** }
-%"class.std::tuple.15" = type { i8 }
+%"class.std::tuple.12" = type { i8 }
 %"struct.std::pair.8" = type <{ i8*, i32, [4 x i8] }>
 %"struct.std::__detail::_Insert" = type { i8 }
 %"struct.std::__detail::_Insert_base" = type { i8 }
@@ -43,9 +43,6 @@ target triple = "x86_64-unknown-linux-gnu"
 %"struct.std::__detail::_Hashtable_ebo_helper.4" = type { i8 }
 %"class.std::allocator.5" = type { i8 }
 %"class.__gnu_cxx::new_allocator.6" = type { i8 }
-%"struct.std::__detail::_Hash_node_value_base" = type <{ %"struct.std::__detail::_Hash_node_base", %"struct.__gnu_cxx::__aligned_buffer", [4 x i8] }>
-%"class.std::allocator.12" = type { i8 }
-%"class.__gnu_cxx::new_allocator.13" = type { i8 }
 %"struct.std::__detail::_Hash_code_base" = type { i8 }
 %"struct.std::hash" = type { i8 }
 %"struct.std::equal_to" = type { i8 }
@@ -53,18 +50,21 @@ target triple = "x86_64-unknown-linux-gnu"
 %"struct.std::__detail::_Hashtable_ebo_helper.0" = type { i8 }
 %"struct.std::__detail::_Mod_range_hashing" = type { i8 }
 %"struct.std::__detail::_Hashtable_ebo_helper.1" = type { i8 }
+%"struct.std::__detail::_Hash_node_value_base" = type <{ %"struct.std::__detail::_Hash_node_base", %"struct.__gnu_cxx::__aligned_buffer", [4 x i8] }>
 %"struct.std::__detail::_Hashtable_ebo_helper.2" = type { i8 }
 %"struct.std::__detail::_Hashtable_ebo_helper" = type { i8 }
 %"struct.std::_Select1st" = type { i8 }
-%"struct.std::pair.16" = type { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }
+%"struct.std::pair.13" = type { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }
 %"struct.std::_Index_tuple" = type { i8 }
-%"struct.std::_Index_tuple.19" = type { i8 }
+%"struct.std::_Index_tuple.16" = type { i8 }
 %"class.std::__pair_base.9" = type { i8 }
-%"class.std::__pair_base.17" = type { i8 }
+%"class.std::__pair_base.14" = type { i8 }
 %"struct.std::__detail::_AllocNode" = type { %"struct.std::__detail::_Hashtable_alloc"* }
 %"struct.std::integral_constant" = type { i8 }
-%"struct.std::pair.20" = type { i8, i64 }
+%"struct.std::pair.17" = type { i8, i64 }
 %"class.std::__pair_base" = type { i8 }
+%"class.std::allocator.20" = type { i8 }
+%"class.__gnu_cxx::new_allocator.21" = type { i8 }
 
 $_ZNSt3mapIPKcjSt4lessIS1_ESaISt4pairIKS1_jEEEC2Ev = comdat any
 
@@ -89,8 +89,6 @@ $_ZNKSt17_Rb_tree_iteratorISt4pairIKPKcjEEdeEv = comdat any
 $_ZNSt17_Rb_tree_iteratorISt4pairIKPKcjEEppEv = comdat any
 
 $_ZNSt3mapIPKcjSt4lessIS1_ESaISt4pairIKS1_jEEED2Ev = comdat any
-
-$_ZNSt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEED2Ev = comdat any
 
 $_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EEC2Ev = comdat any
 
@@ -160,76 +158,6 @@ $_ZNSaISt13_Rb_tree_nodeISt4pairIKPKcjEEED2Ev = comdat any
 
 $_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKPKcjEEED2Ev = comdat any
 
-$_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEED2Ev = comdat any
-
-$_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE5clearEv = comdat any
-
-$_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEv = comdat any
-
-$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEED2Ev = comdat any
-
-$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE19_M_deallocate_nodesEPS2_ = comdat any
-
-$_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE8_M_beginEv = comdat any
-
-$_ZNKSt8__detail10_Hash_nodeIjLb0EE7_M_nextEv = comdat any
-
-$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE18_M_deallocate_nodeEPS2_ = comdat any
-
-$_ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeIjLb0EEEE10pointer_toERS2_ = comdat any
-
-$_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE7destroyIjEEvRS3_PT_ = comdat any
-
-$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv = comdat any
-
-$_ZNSt8__detail21_Hash_node_value_baseIjE9_M_valptrEv = comdat any
-
-$_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE10deallocateERS3_PS2_m = comdat any
-
-$_ZSt9addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_ = comdat any
-
-$_ZSt11__addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_ = comdat any
-
-$_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE7destroyIjEEvPT_ = comdat any
-
-$_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EE6_S_getERS4_ = comdat any
-
-$_ZN9__gnu_cxx16__aligned_bufferIjE6_M_ptrEv = comdat any
-
-$_ZN9__gnu_cxx16__aligned_bufferIjE7_M_addrEv = comdat any
-
-$_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE10deallocateEPS3_m = comdat any
-
-$_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEPPNS1_15_Hash_node_baseEm = comdat any
-
-$_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_uses_single_bucketEPPNS1_15_Hash_node_baseE = comdat any
-
-$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm = comdat any
-
-$_ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_ = comdat any
-
-$_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E = comdat any
-
-$_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE10deallocateERS3_PS2_m = comdat any
-
-$_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev = comdat any
-
-$_ZSt9addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_ = comdat any
-
-$_ZSt11__addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_ = comdat any
-
-$_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev = comdat any
-
-$_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m = comdat any
-
-$_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev = comdat any
-
-$_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EED2Ev = comdat any
-
-$_ZNSaINSt8__detail10_Hash_nodeIjLb0EEEED2Ev = comdat any
-
-$_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEED2Ev = comdat any
-
 $_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE5countERKj = comdat any
 
 $_ZNKSt8__detail15_Hash_code_baseIjjNS_9_IdentityESt4hashIjENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb0EE12_M_hash_codeERKj = comdat any
@@ -241,6 +169,8 @@ $_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18
 $_ZNKSt8__detail15_Hashtable_baseIjjNS_9_IdentityESt8equal_toIjESt4hashIjENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb0ELb1ELb1EEEE9_M_equalsERKjmPNS_10_Hash_nodeIjLb0EEE = comdat any
 
 $_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE15_M_bucket_indexEPNS1_10_Hash_nodeIjLb0EEE = comdat any
+
+$_ZNKSt8__detail10_Hash_nodeIjLb0EE7_M_nextEv = comdat any
 
 $_ZNKSt8__detail15_Hash_code_baseIjjNS_9_IdentityESt4hashIjENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb0EE5_M_h1Ev = comdat any
 
@@ -269,6 +199,12 @@ $_ZNKSt8__detail9_IdentityclIRjEEOT_S4_ = comdat any
 $_ZNSt8__detail21_Hash_node_value_baseIjE4_M_vEv = comdat any
 
 $_ZSt7forwardIRjEOT_RNSt16remove_referenceIS1_E4typeE = comdat any
+
+$_ZNSt8__detail21_Hash_node_value_baseIjE9_M_valptrEv = comdat any
+
+$_ZN9__gnu_cxx16__aligned_bufferIjE6_M_ptrEv = comdat any
+
+$_ZN9__gnu_cxx16__aligned_bufferIjE7_M_addrEv = comdat any
 
 $_ZNSt8__detail21_Hashtable_ebo_helperILi0ESt8equal_toIjELb1EE7_S_cgetERKS3_ = comdat any
 
@@ -456,19 +392,27 @@ $_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE16_M_allocate_node
 
 $_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE8allocateERS3_m = comdat any
 
+$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv = comdat any
+
 $_ZSt12__to_addressINSt8__detail10_Hash_nodeIjLb0EEEEPT_S4_ = comdat any
 
 $_ZNSt8__detail10_Hash_nodeIjLb0EEC2Ev = comdat any
 
 $_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE9constructIjJRKjEEEvRS3_PT_DpOT0_ = comdat any
 
+$_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE10deallocateERS3_PS2_m = comdat any
+
 $_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE8allocateEmPKv = comdat any
 
 $_ZNK9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE8max_sizeEv = comdat any
 
+$_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EE6_S_getERS4_ = comdat any
+
 $_ZNSt8__detail21_Hash_node_value_baseIjEC2Ev = comdat any
 
 $_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE9constructIjJRKjEEEvPT_DpOT0_ = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE10deallocateEPS3_m = comdat any
 
 $_ZNKSt8__detail20_Prime_rehash_policy8_M_stateEv = comdat any
 
@@ -478,21 +422,61 @@ $_ZNKSt8__detail15_Hash_code_baseIjjNS_9_IdentityESt4hashIjENS_18_Mod_range_hash
 
 $_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE22_M_insert_bucket_beginEmPNS1_10_Hash_nodeIjLb0EEE = comdat any
 
+$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE18_M_deallocate_nodeEPS2_ = comdat any
+
 $_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE13_M_rehash_auxEmSt17integral_constantIbLb1EE = comdat any
 
 $_ZNSt8__detail20_Prime_rehash_policy8_M_resetEm = comdat any
 
 $_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE19_M_allocate_bucketsEm = comdat any
 
+$_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE8_M_beginEv = comdat any
+
+$_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEv = comdat any
+
 $_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE19_M_allocate_bucketsEm = comdat any
+
+$_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E = comdat any
 
 $_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE8allocateERS3_m = comdat any
 
 $_ZSt12__to_addressIPNSt8__detail15_Hash_node_baseEEPT_S4_ = comdat any
 
+$_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev = comdat any
+
 $_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8allocateEmPKv = comdat any
 
 $_ZNK9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8max_sizeEv = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev = comdat any
+
+$_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEPPNS1_15_Hash_node_baseEm = comdat any
+
+$_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_uses_single_bucketEPPNS1_15_Hash_node_baseE = comdat any
+
+$_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm = comdat any
+
+$_ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_ = comdat any
+
+$_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE10deallocateERS3_PS2_m = comdat any
+
+$_ZSt9addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_ = comdat any
+
+$_ZSt11__addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_ = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m = comdat any
+
+$_ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeIjLb0EEEE10pointer_toERS2_ = comdat any
+
+$_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE7destroyIjEEvRS3_PT_ = comdat any
+
+$_ZSt9addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_ = comdat any
+
+$_ZSt11__addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_ = comdat any
+
+$_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE7destroyIjEEvPT_ = comdat any
 
 $_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE3endEv = comdat any
 
@@ -544,7 +528,7 @@ define dso_local void @_Z12__countTakenPKcj(i8*, i32) #0 {
   %22 = load %"class.std::map"*, %"class.std::map"** @_ZL8takenMap, align 8
   %23 = call i64 @_ZNKSt3mapIPKcjSt4lessIS1_ESaISt4pairIKS1_jEEE5countERS5_(%"class.std::map"* %22, i8** dereferenceable(8) %3)
   %24 = icmp ne i64 %23, 0
-  br i1 %24, label %30, label %25
+  br i1 %24, label %25, label %30
 
 25:                                               ; preds = %21
   %26 = load %"class.std::map"*, %"class.std::map"** @_ZL8takenMap, align 8
@@ -648,7 +632,7 @@ define linkonce_odr dso_local dereferenceable(4) i32* @_ZNSt3mapIPKcjSt4lessIS1_
   %9 = alloca %"struct.std::_Rb_tree_iterator", align 8
   %10 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
   %11 = alloca %"class.std::tuple", align 8
-  %12 = alloca %"class.std::tuple.15", align 1
+  %12 = alloca %"class.std::tuple.12", align 1
   store %"class.std::map"* %0, %"class.std::map"** %3, align 8
   store i8** %1, i8*** %4, align 8
   %13 = load %"class.std::map"*, %"class.std::map"** %3, align 8
@@ -683,7 +667,7 @@ define linkonce_odr dso_local dereferenceable(4) i32* @_ZNSt3mapIPKcjSt4lessIS1_
   call void @_ZNSt5tupleIJRKPKcEEC2IvLb1EEES3_(%"class.std::tuple"* %11, i8** dereferenceable(8) %31)
   %32 = getelementptr inbounds %"struct.std::_Rb_tree_const_iterator", %"struct.std::_Rb_tree_const_iterator"* %10, i32 0, i32 0
   %33 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %32, align 8
-  %34 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_(%"class.std::_Rb_tree"* %30, %"struct.std::_Rb_tree_node_base"* %33, %"struct.std::piecewise_construct_t"* dereferenceable(1) @_ZStL19piecewise_construct, %"class.std::tuple"* dereferenceable(8) %11, %"class.std::tuple.15"* dereferenceable(1) %12)
+  %34 = call %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_(%"class.std::_Rb_tree"* %30, %"struct.std::_Rb_tree_node_base"* %33, %"struct.std::piecewise_construct_t"* dereferenceable(1) @_ZStL19piecewise_construct, %"class.std::tuple"* dereferenceable(8) %11, %"class.std::tuple.12"* dereferenceable(1) %12)
   %35 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %9, i32 0, i32 0
   store %"struct.std::_Rb_tree_node_base"* %34, %"struct.std::_Rb_tree_node_base"** %35, align 8
   %36 = bitcast %"struct.std::_Rb_tree_iterator"* %5 to i8*
@@ -777,7 +761,7 @@ define dso_local void @_Z13__printResultv() #0 {
 
 14:                                               ; preds = %11, %0
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([50 x i8], [50 x i8]* @.str, i64 0, i64 0))
-  br label %65
+  br label %60
 
 16:                                               ; preds = %11
   %17 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.1, i64 0, i64 0))
@@ -851,18 +835,7 @@ define dso_local void @_Z13__printResultv() #0 {
   call void @_ZdlPv(i8* %59) #13
   br label %60
 
-60:                                               ; preds = %58, %55
-  %61 = load %"class.std::unordered_set"*, %"class.std::unordered_set"** @_ZL12blockVisited, align 8
-  %62 = icmp eq %"class.std::unordered_set"* %61, null
-  br i1 %62, label %65, label %63
-
-63:                                               ; preds = %60
-  call void @_ZNSt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEED2Ev(%"class.std::unordered_set"* %61) #12
-  %64 = bitcast %"class.std::unordered_set"* %61 to i8*
-  call void @_ZdlPv(i8* %64) #13
-  br label %65
-
-65:                                               ; preds = %14, %63, %60
+60:                                               ; preds = %14, %58, %55
   ret void
 }
 
@@ -961,16 +934,6 @@ define linkonce_odr dso_local void @_ZNSt3mapIPKcjSt4lessIS1_ESaISt4pairIKS1_jEE
 
 ; Function Attrs: nobuiltin nounwind
 declare dso_local void @_ZdlPv(i8*) #4
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt13unordered_setIjSt4hashIjESt8equal_toIjESaIjEED2Ev(%"class.std::unordered_set"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"class.std::unordered_set"*, align 8
-  store %"class.std::unordered_set"* %0, %"class.std::unordered_set"** %2, align 8
-  %3 = load %"class.std::unordered_set"*, %"class.std::unordered_set"** %2, align 8
-  %4 = getelementptr inbounds %"class.std::unordered_set", %"class.std::unordered_set"* %3, i32 0, i32 0
-  call void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEED2Ev(%"class.std::_Hashtable"* %4) #12
-  ret void
-}
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define linkonce_odr dso_local void @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EEC2Ev(%"class.std::_Rb_tree"*) unnamed_addr #2 comdat align 2 {
@@ -1466,514 +1429,6 @@ define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_no
   ret void
 }
 
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEED2Ev(%"class.std::_Hashtable"*) unnamed_addr #2 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
-  %2 = alloca %"class.std::_Hashtable"*, align 8
-  %3 = alloca i8*
-  %4 = alloca i32
-  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %2, align 8
-  %5 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %2, align 8
-  call void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE5clearEv(%"class.std::_Hashtable"* %5) #12
-  invoke void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEv(%"class.std::_Hashtable"* %5)
-          to label %6 unwind label %8
-
-6:                                                ; preds = %1
-  %7 = bitcast %"class.std::_Hashtable"* %5 to %"struct.std::__detail::_Hashtable_alloc"*
-  call void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEED2Ev(%"struct.std::__detail::_Hashtable_alloc"* %7) #12
-  ret void
-
-8:                                                ; preds = %1
-  %9 = landingpad { i8*, i32 }
-          catch i8* null
-  %10 = extractvalue { i8*, i32 } %9, 0
-  store i8* %10, i8** %3, align 8
-  %11 = extractvalue { i8*, i32 } %9, 1
-  store i32 %11, i32* %4, align 4
-  %12 = bitcast %"class.std::_Hashtable"* %5 to %"struct.std::__detail::_Hashtable_alloc"*
-  call void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEED2Ev(%"struct.std::__detail::_Hashtable_alloc"* %12) #12
-  br label %13
-
-13:                                               ; preds = %8
-  %14 = load i8*, i8** %3, align 8
-  call void @__clang_call_terminate(i8* %14) #14
-  unreachable
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE5clearEv(%"class.std::_Hashtable"*) #2 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
-  %2 = alloca %"class.std::_Hashtable"*, align 8
-  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %2, align 8
-  %3 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %2, align 8
-  %4 = bitcast %"class.std::_Hashtable"* %3 to %"struct.std::__detail::_Hashtable_alloc"*
-  %5 = invoke %"struct.std::__detail::_Hash_node"* @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE8_M_beginEv(%"class.std::_Hashtable"* %3)
-          to label %6 unwind label %17
-
-6:                                                ; preds = %1
-  invoke void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE19_M_deallocate_nodesEPS2_(%"struct.std::__detail::_Hashtable_alloc"* %4, %"struct.std::__detail::_Hash_node"* %5)
-          to label %7 unwind label %17
-
-7:                                                ; preds = %6
-  %8 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 0
-  %9 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %8, align 8
-  %10 = bitcast %"struct.std::__detail::_Hash_node_base"** %9 to i8*
-  %11 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 1
-  %12 = load i64, i64* %11, align 8
-  %13 = mul i64 %12, 8
-  call void @llvm.memset.p0i8.i64(i8* align 8 %10, i8 0, i64 %13, i1 false)
-  %14 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 3
-  store i64 0, i64* %14, align 8
-  %15 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 2
-  %16 = getelementptr inbounds %"struct.std::__detail::_Hash_node_base", %"struct.std::__detail::_Hash_node_base"* %15, i32 0, i32 0
-  store %"struct.std::__detail::_Hash_node_base"* null, %"struct.std::__detail::_Hash_node_base"** %16, align 8
-  ret void
-
-17:                                               ; preds = %6, %1
-  %18 = landingpad { i8*, i32 }
-          catch i8* null
-  %19 = extractvalue { i8*, i32 } %18, 0
-  call void @__clang_call_terminate(i8* %19) #14
-  unreachable
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEv(%"class.std::_Hashtable"*) #0 comdat align 2 {
-  %2 = alloca %"class.std::_Hashtable"*, align 8
-  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %2, align 8
-  %3 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %2, align 8
-  %4 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 0
-  %5 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %4, align 8
-  %6 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 1
-  %7 = load i64, i64* %6, align 8
-  call void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEPPNS1_15_Hash_node_baseEm(%"class.std::_Hashtable"* %3, %"struct.std::__detail::_Hash_node_base"** %5, i64 %7)
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEED2Ev(%"struct.std::__detail::_Hashtable_alloc"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
-  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %2, align 8
-  %4 = bitcast %"struct.std::__detail::_Hashtable_alloc"* %3 to %"struct.std::__detail::_Hashtable_ebo_helper.4"*
-  call void @_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EED2Ev(%"struct.std::__detail::_Hashtable_ebo_helper.4"* %4) #12
-  ret void
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE19_M_deallocate_nodesEPS2_(%"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hash_node"*) #0 comdat align 2 {
-  %3 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
-  %4 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %3, align 8
-  store %"struct.std::__detail::_Hash_node"* %1, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %6 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %3, align 8
-  br label %7
-
-7:                                                ; preds = %10, %2
-  %8 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %9 = icmp ne %"struct.std::__detail::_Hash_node"* %8, null
-  br i1 %9, label %10, label %15
-
-10:                                               ; preds = %7
-  %11 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
-  store %"struct.std::__detail::_Hash_node"* %11, %"struct.std::__detail::_Hash_node"** %5, align 8
-  %12 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %13 = call %"struct.std::__detail::_Hash_node"* @_ZNKSt8__detail10_Hash_nodeIjLb0EE7_M_nextEv(%"struct.std::__detail::_Hash_node"* %12) #12
-  store %"struct.std::__detail::_Hash_node"* %13, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %14 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %5, align 8
-  call void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE18_M_deallocate_nodeEPS2_(%"struct.std::__detail::_Hashtable_alloc"* %6, %"struct.std::__detail::_Hash_node"* %14)
-  br label %7
-
-15:                                               ; preds = %7
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE8_M_beginEv(%"class.std::_Hashtable"*) #2 comdat align 2 {
-  %2 = alloca %"class.std::_Hashtable"*, align 8
-  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %2, align 8
-  %3 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %2, align 8
-  %4 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 2
-  %5 = getelementptr inbounds %"struct.std::__detail::_Hash_node_base", %"struct.std::__detail::_Hash_node_base"* %4, i32 0, i32 0
-  %6 = load %"struct.std::__detail::_Hash_node_base"*, %"struct.std::__detail::_Hash_node_base"** %5, align 8
-  %7 = bitcast %"struct.std::__detail::_Hash_node_base"* %6 to %"struct.std::__detail::_Hash_node"*
-  ret %"struct.std::__detail::_Hash_node"* %7
-}
-
-; Function Attrs: argmemonly nounwind
-declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i1 immarg) #6
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNKSt8__detail10_Hash_nodeIjLb0EE7_M_nextEv(%"struct.std::__detail::_Hash_node"*) #2 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
-  %4 = bitcast %"struct.std::__detail::_Hash_node"* %3 to %"struct.std::__detail::_Hash_node_base"*
-  %5 = getelementptr inbounds %"struct.std::__detail::_Hash_node_base", %"struct.std::__detail::_Hash_node_base"* %4, i32 0, i32 0
-  %6 = load %"struct.std::__detail::_Hash_node_base"*, %"struct.std::__detail::_Hash_node_base"** %5, align 8
-  %7 = bitcast %"struct.std::__detail::_Hash_node_base"* %6 to %"struct.std::__detail::_Hash_node"*
-  ret %"struct.std::__detail::_Hash_node"* %7
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE18_M_deallocate_nodeEPS2_(%"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hash_node"*) #0 comdat align 2 {
-  %3 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
-  %4 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %3, align 8
-  store %"struct.std::__detail::_Hash_node"* %1, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %6 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %3, align 8
-  %7 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %8 = call %"struct.std::__detail::_Hash_node"* @_ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeIjLb0EEEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node"* dereferenceable(16) %7) #12
-  store %"struct.std::__detail::_Hash_node"* %8, %"struct.std::__detail::_Hash_node"** %5, align 8
-  %9 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"* %6)
-  %10 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %11 = bitcast %"struct.std::__detail::_Hash_node"* %10 to %"struct.std::__detail::_Hash_node_value_base"*
-  %12 = call i32* @_ZNSt8__detail21_Hash_node_value_baseIjE9_M_valptrEv(%"struct.std::__detail::_Hash_node_value_base"* %11) #12
-  call void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE7destroyIjEEvRS3_PT_(%"class.std::allocator.5"* dereferenceable(1) %9, i32* %12)
-  %13 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
-  %14 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"* %6)
-  %15 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %5, align 8
-  call void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE10deallocateERS3_PS2_m(%"class.std::allocator.5"* dereferenceable(1) %14, %"struct.std::__detail::_Hash_node"* %15, i64 1)
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeIjLb0EEEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node"* dereferenceable(16)) #2 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
-  %4 = call %"struct.std::__detail::_Hash_node"* @_ZSt9addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16) %3) #12
-  ret %"struct.std::__detail::_Hash_node"* %4
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE7destroyIjEEvRS3_PT_(%"class.std::allocator.5"* dereferenceable(1), i32*) #0 comdat align 2 {
-  %3 = alloca %"class.std::allocator.5"*, align 8
-  %4 = alloca i32*, align 8
-  store %"class.std::allocator.5"* %0, %"class.std::allocator.5"** %3, align 8
-  store i32* %1, i32** %4, align 8
-  %5 = load %"class.std::allocator.5"*, %"class.std::allocator.5"** %3, align 8
-  %6 = bitcast %"class.std::allocator.5"* %5 to %"class.__gnu_cxx::new_allocator.6"*
-  %7 = load i32*, i32** %4, align 8
-  call void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE7destroyIjEEvPT_(%"class.__gnu_cxx::new_allocator.6"* %6, i32* %7)
-  ret void
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"*) #0 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
-  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %2, align 8
-  %4 = bitcast %"struct.std::__detail::_Hashtable_alloc"* %3 to %"struct.std::__detail::_Hashtable_ebo_helper.4"*
-  %5 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EE6_S_getERS4_(%"struct.std::__detail::_Hashtable_ebo_helper.4"* dereferenceable(1) %4)
-  ret %"class.std::allocator.5"* %5
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local i32* @_ZNSt8__detail21_Hash_node_value_baseIjE9_M_valptrEv(%"struct.std::__detail::_Hash_node_value_base"*) #2 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hash_node_value_base"*, align 8
-  store %"struct.std::__detail::_Hash_node_value_base"* %0, %"struct.std::__detail::_Hash_node_value_base"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node_value_base"*, %"struct.std::__detail::_Hash_node_value_base"** %2, align 8
-  %4 = getelementptr inbounds %"struct.std::__detail::_Hash_node_value_base", %"struct.std::__detail::_Hash_node_value_base"* %3, i32 0, i32 1
-  %5 = call i32* @_ZN9__gnu_cxx16__aligned_bufferIjE6_M_ptrEv(%"struct.__gnu_cxx::__aligned_buffer"* %4) #12
-  ret i32* %5
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE10deallocateERS3_PS2_m(%"class.std::allocator.5"* dereferenceable(1), %"struct.std::__detail::_Hash_node"*, i64) #0 comdat align 2 {
-  %4 = alloca %"class.std::allocator.5"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  %6 = alloca i64, align 8
-  store %"class.std::allocator.5"* %0, %"class.std::allocator.5"** %4, align 8
-  store %"struct.std::__detail::_Hash_node"* %1, %"struct.std::__detail::_Hash_node"** %5, align 8
-  store i64 %2, i64* %6, align 8
-  %7 = load %"class.std::allocator.5"*, %"class.std::allocator.5"** %4, align 8
-  %8 = bitcast %"class.std::allocator.5"* %7 to %"class.__gnu_cxx::new_allocator.6"*
-  %9 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %5, align 8
-  %10 = load i64, i64* %6, align 8
-  call void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.6"* %8, %"struct.std::__detail::_Hash_node"* %9, i64 %10)
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZSt9addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16)) #2 comdat {
-  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
-  %4 = call %"struct.std::__detail::_Hash_node"* @_ZSt11__addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16) %3) #12
-  ret %"struct.std::__detail::_Hash_node"* %4
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZSt11__addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16)) #2 comdat {
-  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
-  ret %"struct.std::__detail::_Hash_node"* %3
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE7destroyIjEEvPT_(%"class.__gnu_cxx::new_allocator.6"*, i32*) #2 comdat align 2 {
-  %3 = alloca %"class.__gnu_cxx::new_allocator.6"*, align 8
-  %4 = alloca i32*, align 8
-  store %"class.__gnu_cxx::new_allocator.6"* %0, %"class.__gnu_cxx::new_allocator.6"** %3, align 8
-  store i32* %1, i32** %4, align 8
-  %5 = load %"class.__gnu_cxx::new_allocator.6"*, %"class.__gnu_cxx::new_allocator.6"** %3, align 8
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EE6_S_getERS4_(%"struct.std::__detail::_Hashtable_ebo_helper.4"* dereferenceable(1)) #2 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hashtable_ebo_helper.4"*, align 8
-  store %"struct.std::__detail::_Hashtable_ebo_helper.4"* %0, %"struct.std::__detail::_Hashtable_ebo_helper.4"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hashtable_ebo_helper.4"*, %"struct.std::__detail::_Hashtable_ebo_helper.4"** %2, align 8
-  %4 = bitcast %"struct.std::__detail::_Hashtable_ebo_helper.4"* %3 to %"class.std::allocator.5"*
-  ret %"class.std::allocator.5"* %4
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local i32* @_ZN9__gnu_cxx16__aligned_bufferIjE6_M_ptrEv(%"struct.__gnu_cxx::__aligned_buffer"*) #2 comdat align 2 {
-  %2 = alloca %"struct.__gnu_cxx::__aligned_buffer"*, align 8
-  store %"struct.__gnu_cxx::__aligned_buffer"* %0, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
-  %3 = load %"struct.__gnu_cxx::__aligned_buffer"*, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
-  %4 = call i8* @_ZN9__gnu_cxx16__aligned_bufferIjE7_M_addrEv(%"struct.__gnu_cxx::__aligned_buffer"* %3) #12
-  %5 = bitcast i8* %4 to i32*
-  ret i32* %5
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local i8* @_ZN9__gnu_cxx16__aligned_bufferIjE7_M_addrEv(%"struct.__gnu_cxx::__aligned_buffer"*) #2 comdat align 2 {
-  %2 = alloca %"struct.__gnu_cxx::__aligned_buffer"*, align 8
-  store %"struct.__gnu_cxx::__aligned_buffer"* %0, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
-  %3 = load %"struct.__gnu_cxx::__aligned_buffer"*, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
-  %4 = getelementptr inbounds %"struct.__gnu_cxx::__aligned_buffer", %"struct.__gnu_cxx::__aligned_buffer"* %3, i32 0, i32 0
-  %5 = bitcast %"union.std::aligned_storage<4, 4>::type"* %4 to i8*
-  ret i8* %5
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.6"*, %"struct.std::__detail::_Hash_node"*, i64) #2 comdat align 2 {
-  %4 = alloca %"class.__gnu_cxx::new_allocator.6"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node"*, align 8
-  %6 = alloca i64, align 8
-  store %"class.__gnu_cxx::new_allocator.6"* %0, %"class.__gnu_cxx::new_allocator.6"** %4, align 8
-  store %"struct.std::__detail::_Hash_node"* %1, %"struct.std::__detail::_Hash_node"** %5, align 8
-  store i64 %2, i64* %6, align 8
-  %7 = load %"class.__gnu_cxx::new_allocator.6"*, %"class.__gnu_cxx::new_allocator.6"** %4, align 8
-  %8 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %5, align 8
-  %9 = bitcast %"struct.std::__detail::_Hash_node"* %8 to i8*
-  call void @_ZdlPv(i8* %9) #12
-  ret void
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEPPNS1_15_Hash_node_baseEm(%"class.std::_Hashtable"*, %"struct.std::__detail::_Hash_node_base"**, i64) #0 comdat align 2 {
-  %4 = alloca %"class.std::_Hashtable"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  %6 = alloca i64, align 8
-  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %4, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  store i64 %2, i64* %6, align 8
-  %7 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %4, align 8
-  %8 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  %9 = call zeroext i1 @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_uses_single_bucketEPPNS1_15_Hash_node_baseE(%"class.std::_Hashtable"* %7, %"struct.std::__detail::_Hash_node_base"** %8)
-  br i1 %9, label %10, label %11
-
-10:                                               ; preds = %3
-  br label %15
-
-11:                                               ; preds = %3
-  %12 = bitcast %"class.std::_Hashtable"* %7 to %"struct.std::__detail::_Hashtable_alloc"*
-  %13 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  %14 = load i64, i64* %6, align 8
-  call void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm(%"struct.std::__detail::_Hashtable_alloc"* %12, %"struct.std::__detail::_Hash_node_base"** %13, i64 %14)
-  br label %15
-
-15:                                               ; preds = %11, %10
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local zeroext i1 @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_uses_single_bucketEPPNS1_15_Hash_node_baseE(%"class.std::_Hashtable"*, %"struct.std::__detail::_Hash_node_base"**) #2 comdat align 2 {
-  %3 = alloca %"class.std::_Hashtable"*, align 8
-  %4 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %3, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %4, align 8
-  %5 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %3, align 8
-  %6 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %4, align 8
-  %7 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %5, i32 0, i32 5
-  %8 = icmp eq %"struct.std::__detail::_Hash_node_base"** %6, %7
-  ret i1 %8
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm(%"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hash_node_base"**, i64) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
-  %4 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  %6 = alloca i64, align 8
-  %7 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  %8 = alloca %"class.std::allocator.12", align 1
-  %9 = alloca i8*
-  %10 = alloca i32
-  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %4, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  store i64 %2, i64* %6, align 8
-  %11 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %4, align 8
-  %12 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  %13 = call %"struct.std::__detail::_Hash_node_base"** @_ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8) %12) #12
-  store %"struct.std::__detail::_Hash_node_base"** %13, %"struct.std::__detail::_Hash_node_base"*** %7, align 8
-  %14 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"* %11)
-  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E(%"class.std::allocator.12"* %8, %"class.std::allocator.5"* dereferenceable(1) %14) #12
-  %15 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %7, align 8
-  %16 = load i64, i64* %6, align 8
-  invoke void @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE10deallocateERS3_PS2_m(%"class.std::allocator.12"* dereferenceable(1) %8, %"struct.std::__detail::_Hash_node_base"** %15, i64 %16)
-          to label %17 unwind label %18
-
-17:                                               ; preds = %3
-  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.12"* %8) #12
-  ret void
-
-18:                                               ; preds = %3
-  %19 = landingpad { i8*, i32 }
-          cleanup
-  %20 = extractvalue { i8*, i32 } %19, 0
-  store i8* %20, i8** %9, align 8
-  %21 = extractvalue { i8*, i32 } %19, 1
-  store i32 %21, i32* %10, align 4
-  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.12"* %8) #12
-  br label %22
-
-22:                                               ; preds = %18
-  %23 = load i8*, i8** %9, align 8
-  %24 = load i32, i32* %10, align 4
-  %25 = insertvalue { i8*, i32 } undef, i8* %23, 0
-  %26 = insertvalue { i8*, i32 } %25, i32 %24, 1
-  resume { i8*, i32 } %26
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8)) #2 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %0, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
-  %4 = call %"struct.std::__detail::_Hash_node_base"** @_ZSt9addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8) %3) #12
-  ret %"struct.std::__detail::_Hash_node_base"** %4
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E(%"class.std::allocator.12"*, %"class.std::allocator.5"* dereferenceable(1)) unnamed_addr #2 comdat align 2 {
-  %3 = alloca %"class.std::allocator.12"*, align 8
-  %4 = alloca %"class.std::allocator.5"*, align 8
-  store %"class.std::allocator.12"* %0, %"class.std::allocator.12"** %3, align 8
-  store %"class.std::allocator.5"* %1, %"class.std::allocator.5"** %4, align 8
-  %5 = load %"class.std::allocator.12"*, %"class.std::allocator.12"** %3, align 8
-  %6 = bitcast %"class.std::allocator.12"* %5 to %"class.__gnu_cxx::new_allocator.13"*
-  call void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev(%"class.__gnu_cxx::new_allocator.13"* %6) #12
-  ret void
-}
-
-; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE10deallocateERS3_PS2_m(%"class.std::allocator.12"* dereferenceable(1), %"struct.std::__detail::_Hash_node_base"**, i64) #0 comdat align 2 {
-  %4 = alloca %"class.std::allocator.12"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  %6 = alloca i64, align 8
-  store %"class.std::allocator.12"* %0, %"class.std::allocator.12"** %4, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  store i64 %2, i64* %6, align 8
-  %7 = load %"class.std::allocator.12"*, %"class.std::allocator.12"** %4, align 8
-  %8 = bitcast %"class.std::allocator.12"* %7 to %"class.__gnu_cxx::new_allocator.13"*
-  %9 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  %10 = load i64, i64* %6, align 8
-  call void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.13"* %8, %"struct.std::__detail::_Hash_node_base"** %9, i64 %10)
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.12"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"class.std::allocator.12"*, align 8
-  store %"class.std::allocator.12"* %0, %"class.std::allocator.12"** %2, align 8
-  %3 = load %"class.std::allocator.12"*, %"class.std::allocator.12"** %2, align 8
-  %4 = bitcast %"class.std::allocator.12"* %3 to %"class.__gnu_cxx::new_allocator.13"*
-  call void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.__gnu_cxx::new_allocator.13"* %4) #12
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZSt9addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8)) #2 comdat {
-  %2 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %0, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
-  %4 = call %"struct.std::__detail::_Hash_node_base"** @_ZSt11__addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8) %3) #12
-  ret %"struct.std::__detail::_Hash_node_base"** %4
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZSt11__addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8)) #2 comdat {
-  %2 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %0, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
-  %3 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
-  ret %"struct.std::__detail::_Hash_node_base"** %3
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev(%"class.__gnu_cxx::new_allocator.13"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"class.__gnu_cxx::new_allocator.13"*, align 8
-  store %"class.__gnu_cxx::new_allocator.13"* %0, %"class.__gnu_cxx::new_allocator.13"** %2, align 8
-  %3 = load %"class.__gnu_cxx::new_allocator.13"*, %"class.__gnu_cxx::new_allocator.13"** %2, align 8
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.13"*, %"struct.std::__detail::_Hash_node_base"**, i64) #2 comdat align 2 {
-  %4 = alloca %"class.__gnu_cxx::new_allocator.13"*, align 8
-  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
-  %6 = alloca i64, align 8
-  store %"class.__gnu_cxx::new_allocator.13"* %0, %"class.__gnu_cxx::new_allocator.13"** %4, align 8
-  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  store i64 %2, i64* %6, align 8
-  %7 = load %"class.__gnu_cxx::new_allocator.13"*, %"class.__gnu_cxx::new_allocator.13"** %4, align 8
-  %8 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
-  %9 = bitcast %"struct.std::__detail::_Hash_node_base"** %8 to i8*
-  call void @_ZdlPv(i8* %9) #12
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.__gnu_cxx::new_allocator.13"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"class.__gnu_cxx::new_allocator.13"*, align 8
-  store %"class.__gnu_cxx::new_allocator.13"* %0, %"class.__gnu_cxx::new_allocator.13"** %2, align 8
-  %3 = load %"class.__gnu_cxx::new_allocator.13"*, %"class.__gnu_cxx::new_allocator.13"** %2, align 8
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EED2Ev(%"struct.std::__detail::_Hashtable_ebo_helper.4"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"struct.std::__detail::_Hashtable_ebo_helper.4"*, align 8
-  store %"struct.std::__detail::_Hashtable_ebo_helper.4"* %0, %"struct.std::__detail::_Hashtable_ebo_helper.4"** %2, align 8
-  %3 = load %"struct.std::__detail::_Hashtable_ebo_helper.4"*, %"struct.std::__detail::_Hashtable_ebo_helper.4"** %2, align 8
-  %4 = bitcast %"struct.std::__detail::_Hashtable_ebo_helper.4"* %3 to %"class.std::allocator.5"*
-  call void @_ZNSaINSt8__detail10_Hash_nodeIjLb0EEEED2Ev(%"class.std::allocator.5"* %4) #12
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSaINSt8__detail10_Hash_nodeIjLb0EEEED2Ev(%"class.std::allocator.5"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"class.std::allocator.5"*, align 8
-  store %"class.std::allocator.5"* %0, %"class.std::allocator.5"** %2, align 8
-  %3 = load %"class.std::allocator.5"*, %"class.std::allocator.5"** %2, align 8
-  %4 = bitcast %"class.std::allocator.5"* %3 to %"class.__gnu_cxx::new_allocator.6"*
-  call void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEED2Ev(%"class.__gnu_cxx::new_allocator.6"* %4) #12
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEED2Ev(%"class.__gnu_cxx::new_allocator.6"*) unnamed_addr #2 comdat align 2 {
-  %2 = alloca %"class.__gnu_cxx::new_allocator.6"*, align 8
-  store %"class.__gnu_cxx::new_allocator.6"* %0, %"class.__gnu_cxx::new_allocator.6"** %2, align 8
-  %3 = load %"class.__gnu_cxx::new_allocator.6"*, %"class.__gnu_cxx::new_allocator.6"** %2, align 8
-  ret void
-}
-
 ; Function Attrs: noinline optnone uwtable
 define linkonce_odr dso_local i64 @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE5countERKj(%"class.std::_Hashtable"*, i32* dereferenceable(4)) #0 comdat align 2 {
   %3 = alloca i64, align 8
@@ -2173,6 +1628,18 @@ define linkonce_odr dso_local i64 @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_Ident
   ret i64 %10
 }
 
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNKSt8__detail10_Hash_nodeIjLb0EE7_M_nextEv(%"struct.std::__detail::_Hash_node"*) #2 comdat align 2 {
+  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
+  %4 = bitcast %"struct.std::__detail::_Hash_node"* %3 to %"struct.std::__detail::_Hash_node_base"*
+  %5 = getelementptr inbounds %"struct.std::__detail::_Hash_node_base", %"struct.std::__detail::_Hash_node_base"* %4, i32 0, i32 0
+  %6 = load %"struct.std::__detail::_Hash_node_base"*, %"struct.std::__detail::_Hash_node_base"** %5, align 8
+  %7 = bitcast %"struct.std::__detail::_Hash_node_base"* %6 to %"struct.std::__detail::_Hash_node"*
+  ret %"struct.std::__detail::_Hash_node"* %7
+}
+
 ; Function Attrs: noinline optnone uwtable
 define linkonce_odr dso_local dereferenceable(1) %"struct.std::hash"* @_ZNKSt8__detail15_Hash_code_baseIjjNS_9_IdentityESt4hashIjENS_18_Mod_range_hashingENS_20_Default_ranged_hashELb0EE5_M_h1Ev(%"struct.std::__detail::_Hash_code_base"*) #0 comdat align 2 {
   %2 = alloca %"struct.std::__detail::_Hash_code_base"*, align 8
@@ -2343,6 +1810,36 @@ define linkonce_odr dso_local dereferenceable(4) i32* @_ZSt7forwardIRjEOT_RNSt16
   store i32* %0, i32** %2, align 8
   %3 = load i32*, i32** %2, align 8
   ret i32* %3
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local i32* @_ZNSt8__detail21_Hash_node_value_baseIjE9_M_valptrEv(%"struct.std::__detail::_Hash_node_value_base"*) #2 comdat align 2 {
+  %2 = alloca %"struct.std::__detail::_Hash_node_value_base"*, align 8
+  store %"struct.std::__detail::_Hash_node_value_base"* %0, %"struct.std::__detail::_Hash_node_value_base"** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node_value_base"*, %"struct.std::__detail::_Hash_node_value_base"** %2, align 8
+  %4 = getelementptr inbounds %"struct.std::__detail::_Hash_node_value_base", %"struct.std::__detail::_Hash_node_value_base"* %3, i32 0, i32 1
+  %5 = call i32* @_ZN9__gnu_cxx16__aligned_bufferIjE6_M_ptrEv(%"struct.__gnu_cxx::__aligned_buffer"* %4) #12
+  ret i32* %5
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local i32* @_ZN9__gnu_cxx16__aligned_bufferIjE6_M_ptrEv(%"struct.__gnu_cxx::__aligned_buffer"*) #2 comdat align 2 {
+  %2 = alloca %"struct.__gnu_cxx::__aligned_buffer"*, align 8
+  store %"struct.__gnu_cxx::__aligned_buffer"* %0, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
+  %3 = load %"struct.__gnu_cxx::__aligned_buffer"*, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
+  %4 = call i8* @_ZN9__gnu_cxx16__aligned_bufferIjE7_M_addrEv(%"struct.__gnu_cxx::__aligned_buffer"* %3) #12
+  %5 = bitcast i8* %4 to i32*
+  ret i32* %5
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local i8* @_ZN9__gnu_cxx16__aligned_bufferIjE7_M_addrEv(%"struct.__gnu_cxx::__aligned_buffer"*) #2 comdat align 2 {
+  %2 = alloca %"struct.__gnu_cxx::__aligned_buffer"*, align 8
+  store %"struct.__gnu_cxx::__aligned_buffer"* %0, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
+  %3 = load %"struct.__gnu_cxx::__aligned_buffer"*, %"struct.__gnu_cxx::__aligned_buffer"** %2, align 8
+  %4 = getelementptr inbounds %"struct.__gnu_cxx::__aligned_buffer", %"struct.__gnu_cxx::__aligned_buffer"* %3, i32 0, i32 0
+  %5 = bitcast %"union.std::aligned_storage<4, 4>::type"* %4 to i8*
+  ret i8* %5
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
@@ -2838,15 +2335,15 @@ define linkonce_odr dso_local void @_ZNKSt3mapIPKcjSt4lessIS1_ESaISt4pairIKS1_jE
 }
 
 ; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_(%"class.std::_Rb_tree"*, %"struct.std::_Rb_tree_node_base"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.15"* dereferenceable(1)) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr dso_local %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_(%"class.std::_Rb_tree"*, %"struct.std::_Rb_tree_node_base"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.12"* dereferenceable(1)) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
   %6 = alloca %"struct.std::_Rb_tree_iterator", align 8
   %7 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
   %8 = alloca %"class.std::_Rb_tree"*, align 8
   %9 = alloca %"struct.std::piecewise_construct_t"*, align 8
   %10 = alloca %"class.std::tuple"*, align 8
-  %11 = alloca %"class.std::tuple.15"*, align 8
+  %11 = alloca %"class.std::tuple.12"*, align 8
   %12 = alloca %"struct.std::_Rb_tree_node"*, align 8
-  %13 = alloca %"struct.std::pair.16", align 8
+  %13 = alloca %"struct.std::pair.13", align 8
   %14 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
   %15 = alloca i8*
   %16 = alloca i32
@@ -2855,15 +2352,15 @@ define linkonce_odr dso_local %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_tree
   store %"class.std::_Rb_tree"* %0, %"class.std::_Rb_tree"** %8, align 8
   store %"struct.std::piecewise_construct_t"* %2, %"struct.std::piecewise_construct_t"** %9, align 8
   store %"class.std::tuple"* %3, %"class.std::tuple"** %10, align 8
-  store %"class.std::tuple.15"* %4, %"class.std::tuple.15"** %11, align 8
+  store %"class.std::tuple.12"* %4, %"class.std::tuple.12"** %11, align 8
   %18 = load %"class.std::_Rb_tree"*, %"class.std::_Rb_tree"** %8, align 8
   %19 = load %"struct.std::piecewise_construct_t"*, %"struct.std::piecewise_construct_t"** %9, align 8
   %20 = call dereferenceable(1) %"struct.std::piecewise_construct_t"* @_ZSt7forwardIRKSt21piecewise_construct_tEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::piecewise_construct_t"* dereferenceable(1) %19) #12
   %21 = load %"class.std::tuple"*, %"class.std::tuple"** %10, align 8
   %22 = call dereferenceable(8) %"class.std::tuple"* @_ZSt7forwardISt5tupleIJRKPKcEEEOT_RNSt16remove_referenceIS6_E4typeE(%"class.std::tuple"* dereferenceable(8) %21) #12
-  %23 = load %"class.std::tuple.15"*, %"class.std::tuple.15"** %11, align 8
-  %24 = call dereferenceable(1) %"class.std::tuple.15"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.15"* dereferenceable(1) %23) #12
-  %25 = call %"struct.std::_Rb_tree_node"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE14_M_create_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"* %18, %"struct.std::piecewise_construct_t"* dereferenceable(1) %20, %"class.std::tuple"* dereferenceable(8) %22, %"class.std::tuple.15"* dereferenceable(1) %24)
+  %23 = load %"class.std::tuple.12"*, %"class.std::tuple.12"** %11, align 8
+  %24 = call dereferenceable(1) %"class.std::tuple.12"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.12"* dereferenceable(1) %23) #12
+  %25 = call %"struct.std::_Rb_tree_node"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE14_M_create_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"* %18, %"struct.std::piecewise_construct_t"* dereferenceable(1) %20, %"class.std::tuple"* dereferenceable(8) %22, %"class.std::tuple.12"* dereferenceable(1) %24)
   store %"struct.std::_Rb_tree_node"* %25, %"struct.std::_Rb_tree_node"** %12, align 8
   %26 = bitcast %"struct.std::_Rb_tree_const_iterator"* %14 to i8*
   %27 = bitcast %"struct.std::_Rb_tree_const_iterator"* %7 to i8*
@@ -2879,22 +2376,22 @@ define linkonce_odr dso_local %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_tree
           to label %34 unwind label %52
 
 34:                                               ; preds = %30
-  %35 = bitcast %"struct.std::pair.16"* %13 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
+  %35 = bitcast %"struct.std::pair.13"* %13 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
   %36 = getelementptr inbounds { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }, { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }* %35, i32 0, i32 0
   %37 = extractvalue { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } %33, 0
   store %"struct.std::_Rb_tree_node_base"* %37, %"struct.std::_Rb_tree_node_base"** %36, align 8
   %38 = getelementptr inbounds { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }, { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }* %35, i32 0, i32 1
   %39 = extractvalue { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } %33, 1
   store %"struct.std::_Rb_tree_node_base"* %39, %"struct.std::_Rb_tree_node_base"** %38, align 8
-  %40 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %13, i32 0, i32 1
+  %40 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %13, i32 0, i32 1
   %41 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %40, align 8
   %42 = icmp ne %"struct.std::_Rb_tree_node_base"* %41, null
   br i1 %42, label %43, label %60
 
 43:                                               ; preds = %34
-  %44 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %13, i32 0, i32 0
+  %44 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %13, i32 0, i32 0
   %45 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %44, align 8
-  %46 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %13, i32 0, i32 1
+  %46 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %13, i32 0, i32 1
   %47 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %46, align 8
   %48 = load %"struct.std::_Rb_tree_node"*, %"struct.std::_Rb_tree_node"** %12, align 8
   %49 = invoke %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E(%"class.std::_Rb_tree"* %18, %"struct.std::_Rb_tree_node_base"* %45, %"struct.std::_Rb_tree_node_base"* %47, %"struct.std::_Rb_tree_node"* %48)
@@ -2925,7 +2422,7 @@ define linkonce_odr dso_local %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_tree
 60:                                               ; preds = %34
   %61 = load %"struct.std::_Rb_tree_node"*, %"struct.std::_Rb_tree_node"** %12, align 8
   call void @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE12_M_drop_nodeEPSt13_Rb_tree_nodeIS4_E(%"class.std::_Rb_tree"* %18, %"struct.std::_Rb_tree_node"* %61) #12
-  %62 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %13, i32 0, i32 0
+  %62 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %13, i32 0, i32 0
   %63 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %62, align 8
   call void @_ZNSt17_Rb_tree_iteratorISt4pairIKPKcjEEC2EPSt18_Rb_tree_node_base(%"struct.std::_Rb_tree_iterator"* %6, %"struct.std::_Rb_tree_node_base"* %63) #12
   br label %70
@@ -3114,16 +2611,16 @@ define linkonce_odr dso_local void @_ZNKSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select
 }
 
 ; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local %"struct.std::_Rb_tree_node"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE14_M_create_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.15"* dereferenceable(1)) #0 comdat align 2 {
+define linkonce_odr dso_local %"struct.std::_Rb_tree_node"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE14_M_create_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.12"* dereferenceable(1)) #0 comdat align 2 {
   %5 = alloca %"class.std::_Rb_tree"*, align 8
   %6 = alloca %"struct.std::piecewise_construct_t"*, align 8
   %7 = alloca %"class.std::tuple"*, align 8
-  %8 = alloca %"class.std::tuple.15"*, align 8
+  %8 = alloca %"class.std::tuple.12"*, align 8
   %9 = alloca %"struct.std::_Rb_tree_node"*, align 8
   store %"class.std::_Rb_tree"* %0, %"class.std::_Rb_tree"** %5, align 8
   store %"struct.std::piecewise_construct_t"* %1, %"struct.std::piecewise_construct_t"** %6, align 8
   store %"class.std::tuple"* %2, %"class.std::tuple"** %7, align 8
-  store %"class.std::tuple.15"* %3, %"class.std::tuple.15"** %8, align 8
+  store %"class.std::tuple.12"* %3, %"class.std::tuple.12"** %8, align 8
   %10 = load %"class.std::_Rb_tree"*, %"class.std::_Rb_tree"** %5, align 8
   %11 = call %"struct.std::_Rb_tree_node"* @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE11_M_get_nodeEv(%"class.std::_Rb_tree"* %10)
   store %"struct.std::_Rb_tree_node"* %11, %"struct.std::_Rb_tree_node"** %9, align 8
@@ -3132,9 +2629,9 @@ define linkonce_odr dso_local %"struct.std::_Rb_tree_node"* @_ZNSt8_Rb_treeIPKcS
   %14 = call dereferenceable(1) %"struct.std::piecewise_construct_t"* @_ZSt7forwardIRKSt21piecewise_construct_tEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::piecewise_construct_t"* dereferenceable(1) %13) #12
   %15 = load %"class.std::tuple"*, %"class.std::tuple"** %7, align 8
   %16 = call dereferenceable(8) %"class.std::tuple"* @_ZSt7forwardISt5tupleIJRKPKcEEEOT_RNSt16remove_referenceIS6_E4typeE(%"class.std::tuple"* dereferenceable(8) %15) #12
-  %17 = load %"class.std::tuple.15"*, %"class.std::tuple.15"** %8, align 8
-  %18 = call dereferenceable(1) %"class.std::tuple.15"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.15"* dereferenceable(1) %17) #12
-  call void @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE17_M_construct_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEvPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"* %10, %"struct.std::_Rb_tree_node"* %12, %"struct.std::piecewise_construct_t"* dereferenceable(1) %14, %"class.std::tuple"* dereferenceable(8) %16, %"class.std::tuple.15"* dereferenceable(1) %18)
+  %17 = load %"class.std::tuple.12"*, %"class.std::tuple.12"** %8, align 8
+  %18 = call dereferenceable(1) %"class.std::tuple.12"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.12"* dereferenceable(1) %17) #12
+  call void @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE17_M_construct_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEvPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"* %10, %"struct.std::_Rb_tree_node"* %12, %"struct.std::piecewise_construct_t"* dereferenceable(1) %14, %"class.std::tuple"* dereferenceable(8) %16, %"class.std::tuple.12"* dereferenceable(1) %18)
   %19 = load %"struct.std::_Rb_tree_node"*, %"struct.std::_Rb_tree_node"** %9, align 8
   ret %"struct.std::_Rb_tree_node"* %19
 }
@@ -3156,16 +2653,16 @@ define linkonce_odr dso_local dereferenceable(8) %"class.std::tuple"* @_ZSt7forw
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local dereferenceable(1) %"class.std::tuple.15"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.15"* dereferenceable(1)) #2 comdat {
-  %2 = alloca %"class.std::tuple.15"*, align 8
-  store %"class.std::tuple.15"* %0, %"class.std::tuple.15"** %2, align 8
-  %3 = load %"class.std::tuple.15"*, %"class.std::tuple.15"** %2, align 8
-  ret %"class.std::tuple.15"* %3
+define linkonce_odr dso_local dereferenceable(1) %"class.std::tuple.12"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.12"* dereferenceable(1)) #2 comdat {
+  %2 = alloca %"class.std::tuple.12"*, align 8
+  store %"class.std::tuple.12"* %0, %"class.std::tuple.12"** %2, align 8
+  %3 = load %"class.std::tuple.12"*, %"class.std::tuple.12"** %2, align 8
+  ret %"class.std::tuple.12"* %3
 }
 
 ; Function Attrs: noinline optnone uwtable
 define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS3_(%"class.std::_Rb_tree"*, %"struct.std::_Rb_tree_node_base"*, i8** dereferenceable(8)) #0 comdat align 2 {
-  %4 = alloca %"struct.std::pair.16", align 8
+  %4 = alloca %"struct.std::pair.13", align 8
   %5 = alloca %"struct.std::_Rb_tree_const_iterator", align 8
   %6 = alloca %"class.std::_Rb_tree"*, align 8
   %7 = alloca i8**, align 8
@@ -3212,13 +2709,13 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
 38:                                               ; preds = %27
   store %"struct.std::_Rb_tree_node_base"* null, %"struct.std::_Rb_tree_node_base"** %9, align 8
   %39 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE12_M_rightmostEv(%"class.std::_Rb_tree"* %17) #12
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %9, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %39)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %9, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %39)
   br label %153
 
 40:                                               ; preds = %27, %24
   %41 = load i8**, i8*** %7, align 8
   %42 = call { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_(%"class.std::_Rb_tree"* %17, i8** dereferenceable(8) %41)
-  %43 = bitcast %"struct.std::pair.16"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
+  %43 = bitcast %"struct.std::pair.13"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
   %44 = getelementptr inbounds { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }, { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }* %43, i32 0, i32 0
   %45 = extractvalue { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } %42, 0
   store %"struct.std::_Rb_tree_node_base"* %45, %"struct.std::_Rb_tree_node_base"** %44, align 8
@@ -3254,7 +2751,7 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
 67:                                               ; preds = %59
   %68 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE11_M_leftmostEv(%"class.std::_Rb_tree"* %17) #12
   %69 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE11_M_leftmostEv(%"class.std::_Rb_tree"* %17) #12
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %68, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %69)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %68, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %69)
   br label %153
 
 70:                                               ; preds = %59
@@ -3281,19 +2778,19 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
 87:                                               ; preds = %82
   store %"struct.std::_Rb_tree_node_base"* null, %"struct.std::_Rb_tree_node_base"** %11, align 8
   %88 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %10, i32 0, i32 0
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %11, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %88)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %11, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %88)
   br label %153
 
 89:                                               ; preds = %82
   %90 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %8, i32 0, i32 0
   %91 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %8, i32 0, i32 0
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %90, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %91)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %90, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %91)
   br label %153
 
 92:                                               ; preds = %70
   %93 = load i8**, i8*** %7, align 8
   %94 = call { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_(%"class.std::_Rb_tree"* %17, i8** dereferenceable(8) %93)
-  %95 = bitcast %"struct.std::pair.16"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
+  %95 = bitcast %"struct.std::pair.13"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
   %96 = getelementptr inbounds { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }, { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }* %95, i32 0, i32 0
   %97 = extractvalue { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } %94, 0
   store %"struct.std::_Rb_tree_node_base"* %97, %"struct.std::_Rb_tree_node_base"** %96, align 8
@@ -3329,7 +2826,7 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
 119:                                              ; preds = %111
   store %"struct.std::_Rb_tree_node_base"* null, %"struct.std::_Rb_tree_node_base"** %13, align 8
   %120 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE12_M_rightmostEv(%"class.std::_Rb_tree"* %17) #12
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %13, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %120)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %13, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %120)
   br label %153
 
 121:                                              ; preds = %111
@@ -3356,19 +2853,19 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
 138:                                              ; preds = %133
   store %"struct.std::_Rb_tree_node_base"* null, %"struct.std::_Rb_tree_node_base"** %14, align 8
   %139 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %8, i32 0, i32 0
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %14, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %139)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %14, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %139)
   br label %153
 
 140:                                              ; preds = %133
   %141 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %12, i32 0, i32 0
   %142 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %12, i32 0, i32 0
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %141, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %142)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %141, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %142)
   br label %153
 
 143:                                              ; preds = %121
   %144 = load i8**, i8*** %7, align 8
   %145 = call { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_(%"class.std::_Rb_tree"* %17, i8** dereferenceable(8) %144)
-  %146 = bitcast %"struct.std::pair.16"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
+  %146 = bitcast %"struct.std::pair.13"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
   %147 = getelementptr inbounds { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }, { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }* %146, i32 0, i32 0
   %148 = extractvalue { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } %145, 0
   store %"struct.std::_Rb_tree_node_base"* %148, %"struct.std::_Rb_tree_node_base"** %147, align 8
@@ -3380,11 +2877,11 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
 151:                                              ; preds = %100
   %152 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %8, i32 0, i32 0
   store %"struct.std::_Rb_tree_node_base"* null, %"struct.std::_Rb_tree_node_base"** %15, align 8
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEEOT_RKS1_(%"struct.std::pair.16"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %152, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %15)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEEOT_RKS1_(%"struct.std::pair.13"* %4, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %152, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %15)
   br label %153
 
 153:                                              ; preds = %151, %143, %140, %138, %119, %92, %89, %87, %67, %40, %38
-  %154 = bitcast %"struct.std::pair.16"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
+  %154 = bitcast %"struct.std::pair.13"* %4 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
   %155 = load { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }, { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }* %154, align 8
   ret { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } %155
 }
@@ -3474,19 +2971,19 @@ define linkonce_odr dso_local %"struct.std::_Rb_tree_node"* @_ZNSt8_Rb_treeIPKcS
 }
 
 ; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE17_M_construct_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEvPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"*, %"struct.std::_Rb_tree_node"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.15"* dereferenceable(1)) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr dso_local void @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE17_M_construct_nodeIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEEvPSt13_Rb_tree_nodeIS4_EDpOT_(%"class.std::_Rb_tree"*, %"struct.std::_Rb_tree_node"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.12"* dereferenceable(1)) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
   %6 = alloca %"class.std::_Rb_tree"*, align 8
   %7 = alloca %"struct.std::_Rb_tree_node"*, align 8
   %8 = alloca %"struct.std::piecewise_construct_t"*, align 8
   %9 = alloca %"class.std::tuple"*, align 8
-  %10 = alloca %"class.std::tuple.15"*, align 8
+  %10 = alloca %"class.std::tuple.12"*, align 8
   %11 = alloca i8*
   %12 = alloca i32
   store %"class.std::_Rb_tree"* %0, %"class.std::_Rb_tree"** %6, align 8
   store %"struct.std::_Rb_tree_node"* %1, %"struct.std::_Rb_tree_node"** %7, align 8
   store %"struct.std::piecewise_construct_t"* %2, %"struct.std::piecewise_construct_t"** %8, align 8
   store %"class.std::tuple"* %3, %"class.std::tuple"** %9, align 8
-  store %"class.std::tuple.15"* %4, %"class.std::tuple.15"** %10, align 8
+  store %"class.std::tuple.12"* %4, %"class.std::tuple.12"** %10, align 8
   %13 = load %"class.std::_Rb_tree"*, %"class.std::_Rb_tree"** %6, align 8
   %14 = load %"struct.std::_Rb_tree_node"*, %"struct.std::_Rb_tree_node"** %7, align 8
   %15 = bitcast %"struct.std::_Rb_tree_node"* %14 to i8*
@@ -3501,9 +2998,9 @@ define linkonce_odr dso_local void @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1
   %22 = call dereferenceable(1) %"struct.std::piecewise_construct_t"* @_ZSt7forwardIRKSt21piecewise_construct_tEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::piecewise_construct_t"* dereferenceable(1) %21) #12
   %23 = load %"class.std::tuple"*, %"class.std::tuple"** %9, align 8
   %24 = call dereferenceable(8) %"class.std::tuple"* @_ZSt7forwardISt5tupleIJRKPKcEEEOT_RNSt16remove_referenceIS6_E4typeE(%"class.std::tuple"* dereferenceable(8) %23) #12
-  %25 = load %"class.std::tuple.15"*, %"class.std::tuple.15"** %10, align 8
-  %26 = call dereferenceable(1) %"class.std::tuple.15"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.15"* dereferenceable(1) %25) #12
-  invoke void @_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKPKcjEEEE9constructIS5_JRKSt21piecewise_construct_tSt5tupleIJRS4_EESD_IJEEEEEvRS7_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1) %17, %"struct.std::pair.8"* %19, %"struct.std::piecewise_construct_t"* dereferenceable(1) %22, %"class.std::tuple"* dereferenceable(8) %24, %"class.std::tuple.15"* dereferenceable(1) %26)
+  %25 = load %"class.std::tuple.12"*, %"class.std::tuple.12"** %10, align 8
+  %26 = call dereferenceable(1) %"class.std::tuple.12"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.12"* dereferenceable(1) %25) #12
+  invoke void @_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKPKcjEEEE9constructIS5_JRKSt21piecewise_construct_tSt5tupleIJRS4_EESD_IJEEEEEvRS7_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1) %17, %"struct.std::pair.8"* %19, %"struct.std::piecewise_construct_t"* dereferenceable(1) %22, %"class.std::tuple"* dereferenceable(8) %24, %"class.std::tuple.12"* dereferenceable(1) %26)
           to label %27 unwind label %28
 
 27:                                               ; preds = %20
@@ -3612,17 +3109,17 @@ define linkonce_odr dso_local i64 @_ZNK9__gnu_cxx13new_allocatorISt13_Rb_tree_no
 declare dso_local void @_ZSt17__throw_bad_allocv() #8
 
 ; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKPKcjEEEE9constructIS5_JRKSt21piecewise_construct_tSt5tupleIJRS4_EESD_IJEEEEEvRS7_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1), %"struct.std::pair.8"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.15"* dereferenceable(1)) #0 comdat align 2 {
+define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaISt13_Rb_tree_nodeISt4pairIKPKcjEEEE9constructIS5_JRKSt21piecewise_construct_tSt5tupleIJRS4_EESD_IJEEEEEvRS7_PT_DpOT0_(%"class.std::allocator"* dereferenceable(1), %"struct.std::pair.8"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.12"* dereferenceable(1)) #0 comdat align 2 {
   %6 = alloca %"class.std::allocator"*, align 8
   %7 = alloca %"struct.std::pair.8"*, align 8
   %8 = alloca %"struct.std::piecewise_construct_t"*, align 8
   %9 = alloca %"class.std::tuple"*, align 8
-  %10 = alloca %"class.std::tuple.15"*, align 8
+  %10 = alloca %"class.std::tuple.12"*, align 8
   store %"class.std::allocator"* %0, %"class.std::allocator"** %6, align 8
   store %"struct.std::pair.8"* %1, %"struct.std::pair.8"** %7, align 8
   store %"struct.std::piecewise_construct_t"* %2, %"struct.std::piecewise_construct_t"** %8, align 8
   store %"class.std::tuple"* %3, %"class.std::tuple"** %9, align 8
-  store %"class.std::tuple.15"* %4, %"class.std::tuple.15"** %10, align 8
+  store %"class.std::tuple.12"* %4, %"class.std::tuple.12"** %10, align 8
   %11 = load %"class.std::allocator"*, %"class.std::allocator"** %6, align 8
   %12 = bitcast %"class.std::allocator"* %11 to %"class.__gnu_cxx::new_allocator"*
   %13 = load %"struct.std::pair.8"*, %"struct.std::pair.8"** %7, align 8
@@ -3630,27 +3127,27 @@ define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaISt13_Rb_tree_node
   %15 = call dereferenceable(1) %"struct.std::piecewise_construct_t"* @_ZSt7forwardIRKSt21piecewise_construct_tEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::piecewise_construct_t"* dereferenceable(1) %14) #12
   %16 = load %"class.std::tuple"*, %"class.std::tuple"** %9, align 8
   %17 = call dereferenceable(8) %"class.std::tuple"* @_ZSt7forwardISt5tupleIJRKPKcEEEOT_RNSt16remove_referenceIS6_E4typeE(%"class.std::tuple"* dereferenceable(8) %16) #12
-  %18 = load %"class.std::tuple.15"*, %"class.std::tuple.15"** %10, align 8
-  %19 = call dereferenceable(1) %"class.std::tuple.15"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.15"* dereferenceable(1) %18) #12
-  call void @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKPKcjEEE9constructIS6_JRKSt21piecewise_construct_tSt5tupleIJRS5_EESD_IJEEEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator"* %12, %"struct.std::pair.8"* %13, %"struct.std::piecewise_construct_t"* dereferenceable(1) %15, %"class.std::tuple"* dereferenceable(8) %17, %"class.std::tuple.15"* dereferenceable(1) %19)
+  %18 = load %"class.std::tuple.12"*, %"class.std::tuple.12"** %10, align 8
+  %19 = call dereferenceable(1) %"class.std::tuple.12"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.12"* dereferenceable(1) %18) #12
+  call void @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKPKcjEEE9constructIS6_JRKSt21piecewise_construct_tSt5tupleIJRS5_EESD_IJEEEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator"* %12, %"struct.std::pair.8"* %13, %"struct.std::piecewise_construct_t"* dereferenceable(1) %15, %"class.std::tuple"* dereferenceable(8) %17, %"class.std::tuple.12"* dereferenceable(1) %19)
   ret void
 }
 
 ; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKPKcjEEE9constructIS6_JRKSt21piecewise_construct_tSt5tupleIJRS5_EESD_IJEEEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator"*, %"struct.std::pair.8"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.15"* dereferenceable(1)) #0 comdat align 2 {
+define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKPKcjEEE9constructIS6_JRKSt21piecewise_construct_tSt5tupleIJRS5_EESD_IJEEEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator"*, %"struct.std::pair.8"*, %"struct.std::piecewise_construct_t"* dereferenceable(1), %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.12"* dereferenceable(1)) #0 comdat align 2 {
   %6 = alloca %"class.__gnu_cxx::new_allocator"*, align 8
   %7 = alloca %"struct.std::pair.8"*, align 8
   %8 = alloca %"struct.std::piecewise_construct_t"*, align 8
   %9 = alloca %"class.std::tuple"*, align 8
-  %10 = alloca %"class.std::tuple.15"*, align 8
+  %10 = alloca %"class.std::tuple.12"*, align 8
   %11 = alloca %"struct.std::piecewise_construct_t", align 1
   %12 = alloca %"class.std::tuple", align 8
-  %13 = alloca %"class.std::tuple.15", align 1
+  %13 = alloca %"class.std::tuple.12", align 1
   store %"class.__gnu_cxx::new_allocator"* %0, %"class.__gnu_cxx::new_allocator"** %6, align 8
   store %"struct.std::pair.8"* %1, %"struct.std::pair.8"** %7, align 8
   store %"struct.std::piecewise_construct_t"* %2, %"struct.std::piecewise_construct_t"** %8, align 8
   store %"class.std::tuple"* %3, %"class.std::tuple"** %9, align 8
-  store %"class.std::tuple.15"* %4, %"class.std::tuple.15"** %10, align 8
+  store %"class.std::tuple.12"* %4, %"class.std::tuple.12"** %10, align 8
   %14 = load %"class.__gnu_cxx::new_allocator"*, %"class.__gnu_cxx::new_allocator"** %6, align 8
   %15 = load %"struct.std::pair.8"*, %"struct.std::pair.8"** %7, align 8
   %16 = bitcast %"struct.std::pair.8"* %15 to i8*
@@ -3660,8 +3157,8 @@ define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_no
   %20 = load %"class.std::tuple"*, %"class.std::tuple"** %9, align 8
   %21 = call dereferenceable(8) %"class.std::tuple"* @_ZSt7forwardISt5tupleIJRKPKcEEEOT_RNSt16remove_referenceIS6_E4typeE(%"class.std::tuple"* dereferenceable(8) %20) #12
   call void @_ZNSt5tupleIJRKPKcEEC2EOS4_(%"class.std::tuple"* %12, %"class.std::tuple"* dereferenceable(8) %21) #12
-  %22 = load %"class.std::tuple.15"*, %"class.std::tuple.15"** %10, align 8
-  %23 = call dereferenceable(1) %"class.std::tuple.15"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.15"* dereferenceable(1) %22) #12
+  %22 = load %"class.std::tuple.12"*, %"class.std::tuple.12"** %10, align 8
+  %23 = call dereferenceable(1) %"class.std::tuple.12"* @_ZSt7forwardISt5tupleIJEEEOT_RNSt16remove_referenceIS2_E4typeE(%"class.std::tuple.12"* dereferenceable(1) %22) #12
   call void @_ZNSt4pairIKPKcjEC2IJRS2_EJEEESt21piecewise_construct_tSt5tupleIJDpT_EES7_IJDpT0_EE(%"struct.std::pair.8"* %17, %"class.std::tuple"* %12)
   ret void
 }
@@ -3683,13 +3180,13 @@ define linkonce_odr dso_local void @_ZNSt5tupleIJRKPKcEEC2EOS4_(%"class.std::tup
 ; Function Attrs: noinline optnone uwtable
 define linkonce_odr dso_local void @_ZNSt4pairIKPKcjEC2IJRS2_EJEEESt21piecewise_construct_tSt5tupleIJDpT_EES7_IJDpT0_EE(%"struct.std::pair.8"*, %"class.std::tuple"*) unnamed_addr #0 comdat align 2 {
   %3 = alloca %"struct.std::piecewise_construct_t", align 1
-  %4 = alloca %"class.std::tuple.15", align 1
+  %4 = alloca %"class.std::tuple.12", align 1
   %5 = alloca %"struct.std::pair.8"*, align 8
   %6 = alloca %"struct.std::_Index_tuple", align 1
-  %7 = alloca %"struct.std::_Index_tuple.19", align 1
+  %7 = alloca %"struct.std::_Index_tuple.16", align 1
   store %"struct.std::pair.8"* %0, %"struct.std::pair.8"** %5, align 8
   %8 = load %"struct.std::pair.8"*, %"struct.std::pair.8"** %5, align 8
-  call void @_ZNSt4pairIKPKcjEC2IJRS2_EJLm0EEJEJEEERSt5tupleIJDpT_EERS6_IJDpT1_EESt12_Index_tupleIJXspT0_EEESF_IJXspT2_EEE(%"struct.std::pair.8"* %8, %"class.std::tuple"* dereferenceable(8) %1, %"class.std::tuple.15"* dereferenceable(1) %4)
+  call void @_ZNSt4pairIKPKcjEC2IJRS2_EJLm0EEJEJEEERSt5tupleIJDpT_EERS6_IJDpT1_EESt12_Index_tupleIJXspT0_EEESF_IJXspT2_EEE(%"struct.std::pair.8"* %8, %"class.std::tuple"* dereferenceable(8) %1, %"class.std::tuple.12"* dereferenceable(1) %4)
   ret void
 }
 
@@ -3760,15 +3257,15 @@ define linkonce_odr dso_local dereferenceable(8) i8** @_ZNSt10_Head_baseILm0ERKP
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt4pairIKPKcjEC2IJRS2_EJLm0EEJEJEEERSt5tupleIJDpT_EERS6_IJDpT1_EESt12_Index_tupleIJXspT0_EEESF_IJXspT2_EEE(%"struct.std::pair.8"*, %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.15"* dereferenceable(1)) unnamed_addr #2 comdat align 2 {
+define linkonce_odr dso_local void @_ZNSt4pairIKPKcjEC2IJRS2_EJLm0EEJEJEEERSt5tupleIJDpT_EERS6_IJDpT1_EESt12_Index_tupleIJXspT0_EEESF_IJXspT2_EEE(%"struct.std::pair.8"*, %"class.std::tuple"* dereferenceable(8), %"class.std::tuple.12"* dereferenceable(1)) unnamed_addr #2 comdat align 2 {
   %4 = alloca %"struct.std::_Index_tuple", align 1
-  %5 = alloca %"struct.std::_Index_tuple.19", align 1
+  %5 = alloca %"struct.std::_Index_tuple.16", align 1
   %6 = alloca %"struct.std::pair.8"*, align 8
   %7 = alloca %"class.std::tuple"*, align 8
-  %8 = alloca %"class.std::tuple.15"*, align 8
+  %8 = alloca %"class.std::tuple.12"*, align 8
   store %"struct.std::pair.8"* %0, %"struct.std::pair.8"** %6, align 8
   store %"class.std::tuple"* %1, %"class.std::tuple"** %7, align 8
-  store %"class.std::tuple.15"* %2, %"class.std::tuple.15"** %8, align 8
+  store %"class.std::tuple.12"* %2, %"class.std::tuple.12"** %8, align 8
   %9 = load %"struct.std::pair.8"*, %"struct.std::pair.8"** %6, align 8
   %10 = bitcast %"struct.std::pair.8"* %9 to %"class.std::__pair_base.9"*
   %11 = getelementptr inbounds %"struct.std::pair.8", %"struct.std::pair.8"* %9, i32 0, i32 0
@@ -3844,20 +3341,20 @@ define linkonce_odr dso_local dereferenceable(8) %"struct.std::_Rb_tree_node_bas
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.16"*, %"struct.std::_Rb_tree_node_base"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
-  %4 = alloca %"struct.std::pair.16"*, align 8
+define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEERKS1_OT_(%"struct.std::pair.13"*, %"struct.std::_Rb_tree_node_base"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
+  %4 = alloca %"struct.std::pair.13"*, align 8
   %5 = alloca %"struct.std::_Rb_tree_node_base"**, align 8
   %6 = alloca %"struct.std::_Rb_tree_node_base"**, align 8
-  store %"struct.std::pair.16"* %0, %"struct.std::pair.16"** %4, align 8
+  store %"struct.std::pair.13"* %0, %"struct.std::pair.13"** %4, align 8
   store %"struct.std::_Rb_tree_node_base"** %1, %"struct.std::_Rb_tree_node_base"*** %5, align 8
   store %"struct.std::_Rb_tree_node_base"** %2, %"struct.std::_Rb_tree_node_base"*** %6, align 8
-  %7 = load %"struct.std::pair.16"*, %"struct.std::pair.16"** %4, align 8
-  %8 = bitcast %"struct.std::pair.16"* %7 to %"class.std::__pair_base.17"*
-  %9 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 0
+  %7 = load %"struct.std::pair.13"*, %"struct.std::pair.13"** %4, align 8
+  %8 = bitcast %"struct.std::pair.13"* %7 to %"class.std::__pair_base.14"*
+  %9 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 0
   %10 = load %"struct.std::_Rb_tree_node_base"**, %"struct.std::_Rb_tree_node_base"*** %5, align 8
   %11 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %10, align 8
   store %"struct.std::_Rb_tree_node_base"* %11, %"struct.std::_Rb_tree_node_base"** %9, align 8
-  %12 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 1
+  %12 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 1
   %13 = load %"struct.std::_Rb_tree_node_base"**, %"struct.std::_Rb_tree_node_base"*** %6, align 8
   %14 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZSt7forwardIRPSt18_Rb_tree_node_baseEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::_Rb_tree_node_base"** dereferenceable(8) %13) #12
   %15 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %14, align 8
@@ -3867,7 +3364,7 @@ define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1
 
 ; Function Attrs: noinline optnone uwtable
 define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } @_ZNSt8_Rb_treeIPKcSt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_(%"class.std::_Rb_tree"*, i8** dereferenceable(8)) #0 comdat align 2 {
-  %3 = alloca %"struct.std::pair.16", align 8
+  %3 = alloca %"struct.std::pair.13", align 8
   %4 = alloca %"class.std::_Rb_tree"*, align 8
   %5 = alloca i8**, align 8
   %6 = alloca %"struct.std::_Rb_tree_node"*, align 8
@@ -3942,7 +3439,7 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
   br i1 %50, label %51, label %52
 
 51:                                               ; preds = %47
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRPSt13_Rb_tree_nodeIS_IKPKcjEERS1_Lb1EEEOT_OT0_(%"struct.std::pair.16"* %3, %"struct.std::_Rb_tree_node"** dereferenceable(8) %6, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %7)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRPSt13_Rb_tree_nodeIS_IKPKcjEERS1_Lb1EEEOT_OT0_(%"struct.std::pair.13"* %3, %"struct.std::_Rb_tree_node"** dereferenceable(8) %6, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %7)
   br label %69
 
 52:                                               ; preds = %47
@@ -3966,17 +3463,17 @@ define linkonce_odr dso_local { %"struct.std::_Rb_tree_node_base"*, %"struct.std
   br i1 %65, label %66, label %67
 
 66:                                               ; preds = %55
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRPSt13_Rb_tree_nodeIS_IKPKcjEERS1_Lb1EEEOT_OT0_(%"struct.std::pair.16"* %3, %"struct.std::_Rb_tree_node"** dereferenceable(8) %6, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %7)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRPSt13_Rb_tree_nodeIS_IKPKcjEERS1_Lb1EEEOT_OT0_(%"struct.std::pair.13"* %3, %"struct.std::_Rb_tree_node"** dereferenceable(8) %6, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %7)
   br label %69
 
 67:                                               ; preds = %55
   %68 = getelementptr inbounds %"struct.std::_Rb_tree_iterator", %"struct.std::_Rb_tree_iterator"* %9, i32 0, i32 0
   store %"struct.std::_Rb_tree_node_base"* null, %"struct.std::_Rb_tree_node_base"** %11, align 8
-  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEEOT_RKS1_(%"struct.std::pair.16"* %3, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %68, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %11)
+  call void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEEOT_RKS1_(%"struct.std::pair.13"* %3, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %68, %"struct.std::_Rb_tree_node_base"** dereferenceable(8) %11)
   br label %69
 
 69:                                               ; preds = %67, %66, %51
-  %70 = bitcast %"struct.std::pair.16"* %3 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
+  %70 = bitcast %"struct.std::pair.13"* %3 to { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }*
   %71 = load { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }, { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* }* %70, align 8
   ret { %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"* } %71
 }
@@ -3996,21 +3493,21 @@ define linkonce_odr dso_local dereferenceable(8) %"struct.std::_Rb_tree_node_bas
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.16"*, %"struct.std::_Rb_tree_node_base"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
-  %4 = alloca %"struct.std::pair.16"*, align 8
+define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_S4_Lb1EEEOT_OT0_(%"struct.std::pair.13"*, %"struct.std::_Rb_tree_node_base"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
+  %4 = alloca %"struct.std::pair.13"*, align 8
   %5 = alloca %"struct.std::_Rb_tree_node_base"**, align 8
   %6 = alloca %"struct.std::_Rb_tree_node_base"**, align 8
-  store %"struct.std::pair.16"* %0, %"struct.std::pair.16"** %4, align 8
+  store %"struct.std::pair.13"* %0, %"struct.std::pair.13"** %4, align 8
   store %"struct.std::_Rb_tree_node_base"** %1, %"struct.std::_Rb_tree_node_base"*** %5, align 8
   store %"struct.std::_Rb_tree_node_base"** %2, %"struct.std::_Rb_tree_node_base"*** %6, align 8
-  %7 = load %"struct.std::pair.16"*, %"struct.std::pair.16"** %4, align 8
-  %8 = bitcast %"struct.std::pair.16"* %7 to %"class.std::__pair_base.17"*
-  %9 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 0
+  %7 = load %"struct.std::pair.13"*, %"struct.std::pair.13"** %4, align 8
+  %8 = bitcast %"struct.std::pair.13"* %7 to %"class.std::__pair_base.14"*
+  %9 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 0
   %10 = load %"struct.std::_Rb_tree_node_base"**, %"struct.std::_Rb_tree_node_base"*** %5, align 8
   %11 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZSt7forwardIRPSt18_Rb_tree_node_baseEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::_Rb_tree_node_base"** dereferenceable(8) %10) #12
   %12 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %11, align 8
   store %"struct.std::_Rb_tree_node_base"* %12, %"struct.std::_Rb_tree_node_base"** %9, align 8
-  %13 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 1
+  %13 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 1
   %14 = load %"struct.std::_Rb_tree_node_base"**, %"struct.std::_Rb_tree_node_base"*** %6, align 8
   %15 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZSt7forwardIRPSt18_Rb_tree_node_baseEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::_Rb_tree_node_base"** dereferenceable(8) %14) #12
   %16 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %15, align 8
@@ -4032,21 +3529,21 @@ define linkonce_odr dso_local dereferenceable(8) %"struct.std::_Rb_tree_iterator
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEEOT_RKS1_(%"struct.std::pair.16"*, %"struct.std::_Rb_tree_node_base"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
-  %4 = alloca %"struct.std::pair.16"*, align 8
+define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRS1_Lb1EEEOT_RKS1_(%"struct.std::pair.13"*, %"struct.std::_Rb_tree_node_base"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
+  %4 = alloca %"struct.std::pair.13"*, align 8
   %5 = alloca %"struct.std::_Rb_tree_node_base"**, align 8
   %6 = alloca %"struct.std::_Rb_tree_node_base"**, align 8
-  store %"struct.std::pair.16"* %0, %"struct.std::pair.16"** %4, align 8
+  store %"struct.std::pair.13"* %0, %"struct.std::pair.13"** %4, align 8
   store %"struct.std::_Rb_tree_node_base"** %1, %"struct.std::_Rb_tree_node_base"*** %5, align 8
   store %"struct.std::_Rb_tree_node_base"** %2, %"struct.std::_Rb_tree_node_base"*** %6, align 8
-  %7 = load %"struct.std::pair.16"*, %"struct.std::pair.16"** %4, align 8
-  %8 = bitcast %"struct.std::pair.16"* %7 to %"class.std::__pair_base.17"*
-  %9 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 0
+  %7 = load %"struct.std::pair.13"*, %"struct.std::pair.13"** %4, align 8
+  %8 = bitcast %"struct.std::pair.13"* %7 to %"class.std::__pair_base.14"*
+  %9 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 0
   %10 = load %"struct.std::_Rb_tree_node_base"**, %"struct.std::_Rb_tree_node_base"*** %5, align 8
   %11 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZSt7forwardIRPSt18_Rb_tree_node_baseEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::_Rb_tree_node_base"** dereferenceable(8) %10) #12
   %12 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %11, align 8
   store %"struct.std::_Rb_tree_node_base"* %12, %"struct.std::_Rb_tree_node_base"** %9, align 8
-  %13 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 1
+  %13 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 1
   %14 = load %"struct.std::_Rb_tree_node_base"**, %"struct.std::_Rb_tree_node_base"*** %6, align 8
   %15 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %14, align 8
   store %"struct.std::_Rb_tree_node_base"* %15, %"struct.std::_Rb_tree_node_base"** %13, align 8
@@ -4081,22 +3578,22 @@ define linkonce_odr dso_local %"struct.std::_Rb_tree_node_base"* @_ZNSt8_Rb_tree
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRPSt13_Rb_tree_nodeIS_IKPKcjEERS1_Lb1EEEOT_OT0_(%"struct.std::pair.16"*, %"struct.std::_Rb_tree_node"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
-  %4 = alloca %"struct.std::pair.16"*, align 8
+define linkonce_odr dso_local void @_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC2IRPSt13_Rb_tree_nodeIS_IKPKcjEERS1_Lb1EEEOT_OT0_(%"struct.std::pair.13"*, %"struct.std::_Rb_tree_node"** dereferenceable(8), %"struct.std::_Rb_tree_node_base"** dereferenceable(8)) unnamed_addr #2 comdat align 2 {
+  %4 = alloca %"struct.std::pair.13"*, align 8
   %5 = alloca %"struct.std::_Rb_tree_node"**, align 8
   %6 = alloca %"struct.std::_Rb_tree_node_base"**, align 8
-  store %"struct.std::pair.16"* %0, %"struct.std::pair.16"** %4, align 8
+  store %"struct.std::pair.13"* %0, %"struct.std::pair.13"** %4, align 8
   store %"struct.std::_Rb_tree_node"** %1, %"struct.std::_Rb_tree_node"*** %5, align 8
   store %"struct.std::_Rb_tree_node_base"** %2, %"struct.std::_Rb_tree_node_base"*** %6, align 8
-  %7 = load %"struct.std::pair.16"*, %"struct.std::pair.16"** %4, align 8
-  %8 = bitcast %"struct.std::pair.16"* %7 to %"class.std::__pair_base.17"*
-  %9 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 0
+  %7 = load %"struct.std::pair.13"*, %"struct.std::pair.13"** %4, align 8
+  %8 = bitcast %"struct.std::pair.13"* %7 to %"class.std::__pair_base.14"*
+  %9 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 0
   %10 = load %"struct.std::_Rb_tree_node"**, %"struct.std::_Rb_tree_node"*** %5, align 8
   %11 = call dereferenceable(8) %"struct.std::_Rb_tree_node"** @_ZSt7forwardIRPSt13_Rb_tree_nodeISt4pairIKPKcjEEEOT_RNSt16remove_referenceIS9_E4typeE(%"struct.std::_Rb_tree_node"** dereferenceable(8) %10) #12
   %12 = load %"struct.std::_Rb_tree_node"*, %"struct.std::_Rb_tree_node"** %11, align 8
   %13 = bitcast %"struct.std::_Rb_tree_node"* %12 to %"struct.std::_Rb_tree_node_base"*
   store %"struct.std::_Rb_tree_node_base"* %13, %"struct.std::_Rb_tree_node_base"** %9, align 8
-  %14 = getelementptr inbounds %"struct.std::pair.16", %"struct.std::pair.16"* %7, i32 0, i32 1
+  %14 = getelementptr inbounds %"struct.std::pair.13", %"struct.std::pair.13"* %7, i32 0, i32 1
   %15 = load %"struct.std::_Rb_tree_node_base"**, %"struct.std::_Rb_tree_node_base"*** %6, align 8
   %16 = call dereferenceable(8) %"struct.std::_Rb_tree_node_base"** @_ZSt7forwardIRPSt18_Rb_tree_node_baseEOT_RNSt16remove_referenceIS3_E4typeE(%"struct.std::_Rb_tree_node_base"** dereferenceable(8) %15) #12
   %17 = load %"struct.std::_Rb_tree_node_base"*, %"struct.std::_Rb_tree_node_base"** %16, align 8
@@ -4369,7 +3866,7 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNSt10_Hash
   %11 = alloca i64, align 8
   %12 = alloca i64*, align 8
   %13 = alloca i64, align 8
-  %14 = alloca %"struct.std::pair.20", align 8
+  %14 = alloca %"struct.std::pair.17", align 8
   %15 = alloca i8*
   %16 = alloca i32
   store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %7, align 8
@@ -4389,20 +3886,20 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNSt10_Hash
   %24 = load i64, i64* %23, align 8
   %25 = load i64, i64* %11, align 8
   %26 = call { i8, i64 } @_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEmmm(%"struct.std::__detail::_Prime_rehash_policy"* %20, i64 %22, i64 %24, i64 %25)
-  %27 = bitcast %"struct.std::pair.20"* %14 to { i8, i64 }*
+  %27 = bitcast %"struct.std::pair.17"* %14 to { i8, i64 }*
   %28 = getelementptr inbounds { i8, i64 }, { i8, i64 }* %27, i32 0, i32 0
   %29 = extractvalue { i8, i64 } %26, 0
   store i8 %29, i8* %28, align 8
   %30 = getelementptr inbounds { i8, i64 }, { i8, i64 }* %27, i32 0, i32 1
   %31 = extractvalue { i8, i64 } %26, 1
   store i64 %31, i64* %30, align 8
-  %32 = getelementptr inbounds %"struct.std::pair.20", %"struct.std::pair.20"* %14, i32 0, i32 0
+  %32 = getelementptr inbounds %"struct.std::pair.17", %"struct.std::pair.17"* %14, i32 0, i32 0
   %33 = load i8, i8* %32, align 8
   %34 = trunc i8 %33 to i1
   br i1 %34, label %35, label %61
 
 35:                                               ; preds = %5
-  %36 = getelementptr inbounds %"struct.std::pair.20", %"struct.std::pair.20"* %14, i32 0, i32 1
+  %36 = getelementptr inbounds %"struct.std::pair.17", %"struct.std::pair.17"* %14, i32 0, i32 1
   %37 = load i64, i64* %36, align 8
   %38 = load i64*, i64** %12, align 8
   invoke void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE9_M_rehashEmRKm(%"class.std::_Hashtable"* %17, i64 %37, i64* dereferenceable(8) %38)
@@ -4772,6 +4269,16 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNSt16alloc
   ret %"struct.std::__detail::_Hash_node"* %8
 }
 
+; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"*) #0 comdat align 2 {
+  %2 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
+  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %2, align 8
+  %3 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %2, align 8
+  %4 = bitcast %"struct.std::__detail::_Hashtable_alloc"* %3 to %"struct.std::__detail::_Hashtable_ebo_helper.4"*
+  %5 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EE6_S_getERS4_(%"struct.std::__detail::_Hashtable_ebo_helper.4"* dereferenceable(1) %4)
+  ret %"class.std::allocator.5"* %5
+}
+
 ; Function Attrs: noinline nounwind optnone uwtable
 define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZSt12__to_addressINSt8__detail10_Hash_nodeIjLb0EEEEPT_S4_(%"struct.std::__detail::_Hash_node"*) #2 comdat {
   %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
@@ -4804,6 +4311,22 @@ define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaINSt8__detail10_Ha
   %10 = load i32*, i32** %6, align 8
   %11 = call dereferenceable(4) i32* @_ZSt7forwardIRKjEOT_RNSt16remove_referenceIS2_E4typeE(i32* dereferenceable(4) %10) #12
   call void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE9constructIjJRKjEEEvPT_DpOT0_(%"class.__gnu_cxx::new_allocator.6"* %8, i32* %9, i32* dereferenceable(4) %11)
+  ret void
+}
+
+; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE10deallocateERS3_PS2_m(%"class.std::allocator.5"* dereferenceable(1), %"struct.std::__detail::_Hash_node"*, i64) #0 comdat align 2 {
+  %4 = alloca %"class.std::allocator.5"*, align 8
+  %5 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  %6 = alloca i64, align 8
+  store %"class.std::allocator.5"* %0, %"class.std::allocator.5"** %4, align 8
+  store %"struct.std::__detail::_Hash_node"* %1, %"struct.std::__detail::_Hash_node"** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.std::allocator.5"*, %"class.std::allocator.5"** %4, align 8
+  %8 = bitcast %"class.std::allocator.5"* %7 to %"class.__gnu_cxx::new_allocator.6"*
+  %9 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %5, align 8
+  %10 = load i64, i64* %6, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.6"* %8, %"struct.std::__detail::_Hash_node"* %9, i64 %10)
   ret void
 }
 
@@ -4842,6 +4365,15 @@ define linkonce_odr dso_local i64 @_ZNK9__gnu_cxx13new_allocatorINSt8__detail10_
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail21_Hashtable_ebo_helperILi0ESaINS_10_Hash_nodeIjLb0EEEELb1EE6_S_getERS4_(%"struct.std::__detail::_Hashtable_ebo_helper.4"* dereferenceable(1)) #2 comdat align 2 {
+  %2 = alloca %"struct.std::__detail::_Hashtable_ebo_helper.4"*, align 8
+  store %"struct.std::__detail::_Hashtable_ebo_helper.4"* %0, %"struct.std::__detail::_Hashtable_ebo_helper.4"** %2, align 8
+  %3 = load %"struct.std::__detail::_Hashtable_ebo_helper.4"*, %"struct.std::__detail::_Hashtable_ebo_helper.4"** %2, align 8
+  %4 = bitcast %"struct.std::__detail::_Hashtable_ebo_helper.4"* %3 to %"class.std::allocator.5"*
+  ret %"class.std::allocator.5"* %4
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
 define linkonce_odr dso_local void @_ZNSt8__detail21_Hash_node_value_baseIjEC2Ev(%"struct.std::__detail::_Hash_node_value_base"*) unnamed_addr #2 comdat align 2 {
   %2 = alloca %"struct.std::__detail::_Hash_node_value_base"*, align 8
   store %"struct.std::__detail::_Hash_node_value_base"* %0, %"struct.std::__detail::_Hash_node_value_base"** %2, align 8
@@ -4868,6 +4400,21 @@ define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_
   %12 = call dereferenceable(4) i32* @_ZSt7forwardIRKjEOT_RNSt16remove_referenceIS2_E4typeE(i32* dereferenceable(4) %11) #12
   %13 = load i32, i32* %12, align 4
   store i32 %13, i32* %10, align 4
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.6"*, %"struct.std::__detail::_Hash_node"*, i64) #2 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::new_allocator.6"*, align 8
+  %5 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  %6 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator.6"* %0, %"class.__gnu_cxx::new_allocator.6"** %4, align 8
+  store %"struct.std::__detail::_Hash_node"* %1, %"struct.std::__detail::_Hash_node"** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.__gnu_cxx::new_allocator.6"*, %"class.__gnu_cxx::new_allocator.6"** %4, align 8
+  %8 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %5, align 8
+  %9 = bitcast %"struct.std::__detail::_Hash_node"* %8 to i8*
+  call void @_ZdlPv(i8* %9) #12
   ret void
 }
 
@@ -5056,6 +4603,29 @@ define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_Ident
 }
 
 ; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE18_M_deallocate_nodeEPS2_(%"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hash_node"*) #0 comdat align 2 {
+  %3 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
+  %4 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  %5 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %3, align 8
+  store %"struct.std::__detail::_Hash_node"* %1, %"struct.std::__detail::_Hash_node"** %4, align 8
+  %6 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %3, align 8
+  %7 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
+  %8 = call %"struct.std::__detail::_Hash_node"* @_ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeIjLb0EEEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node"* dereferenceable(16) %7) #12
+  store %"struct.std::__detail::_Hash_node"* %8, %"struct.std::__detail::_Hash_node"** %5, align 8
+  %9 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"* %6)
+  %10 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
+  %11 = bitcast %"struct.std::__detail::_Hash_node"* %10 to %"struct.std::__detail::_Hash_node_value_base"*
+  %12 = call i32* @_ZNSt8__detail21_Hash_node_value_baseIjE9_M_valptrEv(%"struct.std::__detail::_Hash_node_value_base"* %11) #12
+  call void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE7destroyIjEEvRS3_PT_(%"class.std::allocator.5"* dereferenceable(1) %9, i32* %12)
+  %13 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %4, align 8
+  %14 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"* %6)
+  %15 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %5, align 8
+  call void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE10deallocateERS3_PS2_m(%"class.std::allocator.5"* dereferenceable(1) %14, %"struct.std::__detail::_Hash_node"* %15, i64 1)
+  ret void
+}
+
+; Function Attrs: noinline optnone uwtable
 define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE13_M_rehash_auxEmSt17integral_constantIbLb1EE(%"class.std::_Hashtable"*, i64) #0 comdat align 2 {
   %3 = alloca %"struct.std::integral_constant", align 1
   %4 = alloca %"class.std::_Hashtable"*, align 8
@@ -5220,11 +4790,36 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt1
   ret %"struct.std::__detail::_Hash_node_base"** %17
 }
 
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE8_M_beginEv(%"class.std::_Hashtable"*) #2 comdat align 2 {
+  %2 = alloca %"class.std::_Hashtable"*, align 8
+  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %2, align 8
+  %3 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 2
+  %5 = getelementptr inbounds %"struct.std::__detail::_Hash_node_base", %"struct.std::__detail::_Hash_node_base"* %4, i32 0, i32 0
+  %6 = load %"struct.std::__detail::_Hash_node_base"*, %"struct.std::__detail::_Hash_node_base"** %5, align 8
+  %7 = bitcast %"struct.std::__detail::_Hash_node_base"* %6 to %"struct.std::__detail::_Hash_node"*
+  ret %"struct.std::__detail::_Hash_node"* %7
+}
+
+; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEv(%"class.std::_Hashtable"*) #0 comdat align 2 {
+  %2 = alloca %"class.std::_Hashtable"*, align 8
+  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %2, align 8
+  %3 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %2, align 8
+  %4 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 0
+  %5 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %4, align 8
+  %6 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %3, i32 0, i32 1
+  %7 = load i64, i64* %6, align 8
+  call void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEPPNS1_15_Hash_node_baseEm(%"class.std::_Hashtable"* %3, %"struct.std::__detail::_Hash_node_base"** %5, i64 %7)
+  ret void
+}
+
 ; Function Attrs: noinline optnone uwtable
 define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE19_M_allocate_bucketsEm(%"struct.std::__detail::_Hashtable_alloc"*, i64) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
   %3 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
   %4 = alloca i64, align 8
-  %5 = alloca %"class.std::allocator.12", align 1
+  %5 = alloca %"class.std::allocator.20", align 1
   %6 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
   %7 = alloca i8*
   %8 = alloca i32
@@ -5233,9 +4828,9 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt8
   store i64 %1, i64* %4, align 8
   %10 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %3, align 8
   %11 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"* %10)
-  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E(%"class.std::allocator.12"* %5, %"class.std::allocator.5"* dereferenceable(1) %11) #12
+  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E(%"class.std::allocator.20"* %5, %"class.std::allocator.5"* dereferenceable(1) %11) #12
   %12 = load i64, i64* %4, align 8
-  %13 = invoke %"struct.std::__detail::_Hash_node_base"** @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE8allocateERS3_m(%"class.std::allocator.12"* dereferenceable(1) %5, i64 %12)
+  %13 = invoke %"struct.std::__detail::_Hash_node_base"** @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE8allocateERS3_m(%"class.std::allocator.20"* dereferenceable(1) %5, i64 %12)
           to label %14 unwind label %22
 
 14:                                               ; preds = %2
@@ -5249,7 +4844,7 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt8
   %20 = mul i64 %19, 8
   call void @llvm.memset.p0i8.i64(i8* align 8 %18, i8 0, i64 %20, i1 false)
   %21 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %9, align 8
-  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.12"* %5) #12
+  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.20"* %5) #12
   ret %"struct.std::__detail::_Hash_node_base"** %21
 
 22:                                               ; preds = %2
@@ -5259,7 +4854,7 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt8
   store i8* %24, i8** %7, align 8
   %25 = extractvalue { i8*, i32 } %23, 1
   store i32 %25, i32* %8, align 4
-  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.12"* %5) #12
+  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.20"* %5) #12
   br label %26
 
 26:                                               ; preds = %22
@@ -5270,16 +4865,28 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt8
   resume { i8*, i32 } %30
 }
 
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local void @_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E(%"class.std::allocator.20"*, %"class.std::allocator.5"* dereferenceable(1)) unnamed_addr #2 comdat align 2 {
+  %3 = alloca %"class.std::allocator.20"*, align 8
+  %4 = alloca %"class.std::allocator.5"*, align 8
+  store %"class.std::allocator.20"* %0, %"class.std::allocator.20"** %3, align 8
+  store %"class.std::allocator.5"* %1, %"class.std::allocator.5"** %4, align 8
+  %5 = load %"class.std::allocator.20"*, %"class.std::allocator.20"** %3, align 8
+  %6 = bitcast %"class.std::allocator.20"* %5 to %"class.__gnu_cxx::new_allocator.21"*
+  call void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev(%"class.__gnu_cxx::new_allocator.21"* %6) #12
+  ret void
+}
+
 ; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE8allocateERS3_m(%"class.std::allocator.12"* dereferenceable(1), i64) #0 comdat align 2 {
-  %3 = alloca %"class.std::allocator.12"*, align 8
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE8allocateERS3_m(%"class.std::allocator.20"* dereferenceable(1), i64) #0 comdat align 2 {
+  %3 = alloca %"class.std::allocator.20"*, align 8
   %4 = alloca i64, align 8
-  store %"class.std::allocator.12"* %0, %"class.std::allocator.12"** %3, align 8
+  store %"class.std::allocator.20"* %0, %"class.std::allocator.20"** %3, align 8
   store i64 %1, i64* %4, align 8
-  %5 = load %"class.std::allocator.12"*, %"class.std::allocator.12"** %3, align 8
-  %6 = bitcast %"class.std::allocator.12"* %5 to %"class.__gnu_cxx::new_allocator.13"*
+  %5 = load %"class.std::allocator.20"*, %"class.std::allocator.20"** %3, align 8
+  %6 = bitcast %"class.std::allocator.20"* %5 to %"class.__gnu_cxx::new_allocator.21"*
   %7 = load i64, i64* %4, align 8
-  %8 = call %"struct.std::__detail::_Hash_node_base"** @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.13"* %6, i64 %7, i8* null)
+  %8 = call %"struct.std::__detail::_Hash_node_base"** @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.21"* %6, i64 %7, i8* null)
   ret %"struct.std::__detail::_Hash_node_base"** %8
 }
 
@@ -5291,17 +4898,38 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZSt12
   ret %"struct.std::__detail::_Hash_node_base"** %3
 }
 
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i1 immarg) #6
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.20"*) unnamed_addr #2 comdat align 2 {
+  %2 = alloca %"class.std::allocator.20"*, align 8
+  store %"class.std::allocator.20"* %0, %"class.std::allocator.20"** %2, align 8
+  %3 = load %"class.std::allocator.20"*, %"class.std::allocator.20"** %2, align 8
+  %4 = bitcast %"class.std::allocator.20"* %3 to %"class.__gnu_cxx::new_allocator.21"*
+  call void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.__gnu_cxx::new_allocator.21"* %4) #12
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEEC2Ev(%"class.__gnu_cxx::new_allocator.21"*) unnamed_addr #2 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator.21"*, align 8
+  store %"class.__gnu_cxx::new_allocator.21"* %0, %"class.__gnu_cxx::new_allocator.21"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator.21"*, %"class.__gnu_cxx::new_allocator.21"** %2, align 8
+  ret void
+}
+
 ; Function Attrs: noinline optnone uwtable
-define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.13"*, i64, i8*) #0 comdat align 2 {
-  %4 = alloca %"class.__gnu_cxx::new_allocator.13"*, align 8
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8allocateEmPKv(%"class.__gnu_cxx::new_allocator.21"*, i64, i8*) #0 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::new_allocator.21"*, align 8
   %5 = alloca i64, align 8
   %6 = alloca i8*, align 8
-  store %"class.__gnu_cxx::new_allocator.13"* %0, %"class.__gnu_cxx::new_allocator.13"** %4, align 8
+  store %"class.__gnu_cxx::new_allocator.21"* %0, %"class.__gnu_cxx::new_allocator.21"** %4, align 8
   store i64 %1, i64* %5, align 8
   store i8* %2, i8** %6, align 8
-  %7 = load %"class.__gnu_cxx::new_allocator.13"*, %"class.__gnu_cxx::new_allocator.13"** %4, align 8
+  %7 = load %"class.__gnu_cxx::new_allocator.21"*, %"class.__gnu_cxx::new_allocator.21"** %4, align 8
   %8 = load i64, i64* %5, align 8
-  %9 = call i64 @_ZNK9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8max_sizeEv(%"class.__gnu_cxx::new_allocator.13"* %7) #12
+  %9 = call i64 @_ZNK9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8max_sizeEv(%"class.__gnu_cxx::new_allocator.21"* %7) #12
   %10 = icmp ugt i64 %8, %9
   br i1 %10, label %11, label %12
 
@@ -5318,11 +4946,210 @@ define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZN9__
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local i64 @_ZNK9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8max_sizeEv(%"class.__gnu_cxx::new_allocator.13"*) #2 comdat align 2 {
-  %2 = alloca %"class.__gnu_cxx::new_allocator.13"*, align 8
-  store %"class.__gnu_cxx::new_allocator.13"* %0, %"class.__gnu_cxx::new_allocator.13"** %2, align 8
-  %3 = load %"class.__gnu_cxx::new_allocator.13"*, %"class.__gnu_cxx::new_allocator.13"** %2, align 8
+define linkonce_odr dso_local i64 @_ZNK9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8max_sizeEv(%"class.__gnu_cxx::new_allocator.21"*) #2 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator.21"*, align 8
+  store %"class.__gnu_cxx::new_allocator.21"* %0, %"class.__gnu_cxx::new_allocator.21"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator.21"*, %"class.__gnu_cxx::new_allocator.21"** %2, align 8
   ret i64 2305843009213693951
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.__gnu_cxx::new_allocator.21"*) unnamed_addr #2 comdat align 2 {
+  %2 = alloca %"class.__gnu_cxx::new_allocator.21"*, align 8
+  store %"class.__gnu_cxx::new_allocator.21"* %0, %"class.__gnu_cxx::new_allocator.21"** %2, align 8
+  %3 = load %"class.__gnu_cxx::new_allocator.21"*, %"class.__gnu_cxx::new_allocator.21"** %2, align 8
+  ret void
+}
+
+; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local void @_ZNSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_deallocate_bucketsEPPNS1_15_Hash_node_baseEm(%"class.std::_Hashtable"*, %"struct.std::__detail::_Hash_node_base"**, i64) #0 comdat align 2 {
+  %4 = alloca %"class.std::_Hashtable"*, align 8
+  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  %6 = alloca i64, align 8
+  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %4, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %4, align 8
+  %8 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  %9 = call zeroext i1 @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_uses_single_bucketEPPNS1_15_Hash_node_baseE(%"class.std::_Hashtable"* %7, %"struct.std::__detail::_Hash_node_base"** %8)
+  br i1 %9, label %10, label %11
+
+10:                                               ; preds = %3
+  br label %15
+
+11:                                               ; preds = %3
+  %12 = bitcast %"class.std::_Hashtable"* %7 to %"struct.std::__detail::_Hashtable_alloc"*
+  %13 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  %14 = load i64, i64* %6, align 8
+  call void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm(%"struct.std::__detail::_Hashtable_alloc"* %12, %"struct.std::__detail::_Hash_node_base"** %13, i64 %14)
+  br label %15
+
+15:                                               ; preds = %11, %10
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local zeroext i1 @_ZNKSt10_HashtableIjjSaIjENSt8__detail9_IdentityESt8equal_toIjESt4hashIjENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_uses_single_bucketEPPNS1_15_Hash_node_baseE(%"class.std::_Hashtable"*, %"struct.std::__detail::_Hash_node_base"**) #2 comdat align 2 {
+  %3 = alloca %"class.std::_Hashtable"*, align 8
+  %4 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  store %"class.std::_Hashtable"* %0, %"class.std::_Hashtable"** %3, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %4, align 8
+  %5 = load %"class.std::_Hashtable"*, %"class.std::_Hashtable"** %3, align 8
+  %6 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %4, align 8
+  %7 = getelementptr inbounds %"class.std::_Hashtable", %"class.std::_Hashtable"* %5, i32 0, i32 5
+  %8 = icmp eq %"struct.std::__detail::_Hash_node_base"** %6, %7
+  ret i1 %8
+}
+
+; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local void @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEm(%"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hash_node_base"**, i64) #0 comdat align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+  %4 = alloca %"struct.std::__detail::_Hashtable_alloc"*, align 8
+  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  %6 = alloca i64, align 8
+  %7 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  %8 = alloca %"class.std::allocator.20", align 1
+  %9 = alloca i8*
+  %10 = alloca i32
+  store %"struct.std::__detail::_Hashtable_alloc"* %0, %"struct.std::__detail::_Hashtable_alloc"** %4, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %11 = load %"struct.std::__detail::_Hashtable_alloc"*, %"struct.std::__detail::_Hashtable_alloc"** %4, align 8
+  %12 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  %13 = call %"struct.std::__detail::_Hash_node_base"** @_ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8) %12) #12
+  store %"struct.std::__detail::_Hash_node_base"** %13, %"struct.std::__detail::_Hash_node_base"*** %7, align 8
+  %14 = call dereferenceable(1) %"class.std::allocator.5"* @_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeIjLb0EEEEE17_M_node_allocatorEv(%"struct.std::__detail::_Hashtable_alloc"* %11)
+  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEEC2INS_10_Hash_nodeIjLb0EEEEERKSaIT_E(%"class.std::allocator.20"* %8, %"class.std::allocator.5"* dereferenceable(1) %14) #12
+  %15 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %7, align 8
+  %16 = load i64, i64* %6, align 8
+  invoke void @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE10deallocateERS3_PS2_m(%"class.std::allocator.20"* dereferenceable(1) %8, %"struct.std::__detail::_Hash_node_base"** %15, i64 %16)
+          to label %17 unwind label %18
+
+17:                                               ; preds = %3
+  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.20"* %8) #12
+  ret void
+
+18:                                               ; preds = %3
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %9, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %10, align 4
+  call void @_ZNSaIPNSt8__detail15_Hash_node_baseEED2Ev(%"class.std::allocator.20"* %8) #12
+  br label %22
+
+22:                                               ; preds = %18
+  %23 = load i8*, i8** %9, align 8
+  %24 = load i32, i32* %10, align 4
+  %25 = insertvalue { i8*, i32 } undef, i8* %23, 0
+  %26 = insertvalue { i8*, i32 } %25, i32 %24, 1
+  resume { i8*, i32 } %26
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZNSt14pointer_traitsIPPNSt8__detail15_Hash_node_baseEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8)) #2 comdat align 2 {
+  %2 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %0, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
+  %4 = call %"struct.std::__detail::_Hash_node_base"** @_ZSt9addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8) %3) #12
+  ret %"struct.std::__detail::_Hash_node_base"** %4
+}
+
+; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaIPNSt8__detail15_Hash_node_baseEEE10deallocateERS3_PS2_m(%"class.std::allocator.20"* dereferenceable(1), %"struct.std::__detail::_Hash_node_base"**, i64) #0 comdat align 2 {
+  %4 = alloca %"class.std::allocator.20"*, align 8
+  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  %6 = alloca i64, align 8
+  store %"class.std::allocator.20"* %0, %"class.std::allocator.20"** %4, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.std::allocator.20"*, %"class.std::allocator.20"** %4, align 8
+  %8 = bitcast %"class.std::allocator.20"* %7 to %"class.__gnu_cxx::new_allocator.21"*
+  %9 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  %10 = load i64, i64* %6, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.21"* %8, %"struct.std::__detail::_Hash_node_base"** %9, i64 %10)
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZSt9addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8)) #2 comdat {
+  %2 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %0, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
+  %4 = call %"struct.std::__detail::_Hash_node_base"** @_ZSt11__addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8) %3) #12
+  ret %"struct.std::__detail::_Hash_node_base"** %4
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node_base"** @_ZSt11__addressofIPNSt8__detail15_Hash_node_baseEEPT_RS3_(%"struct.std::__detail::_Hash_node_base"** dereferenceable(8)) #2 comdat {
+  %2 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %0, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %2, align 8
+  ret %"struct.std::__detail::_Hash_node_base"** %3
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_m(%"class.__gnu_cxx::new_allocator.21"*, %"struct.std::__detail::_Hash_node_base"**, i64) #2 comdat align 2 {
+  %4 = alloca %"class.__gnu_cxx::new_allocator.21"*, align 8
+  %5 = alloca %"struct.std::__detail::_Hash_node_base"**, align 8
+  %6 = alloca i64, align 8
+  store %"class.__gnu_cxx::new_allocator.21"* %0, %"class.__gnu_cxx::new_allocator.21"** %4, align 8
+  store %"struct.std::__detail::_Hash_node_base"** %1, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  store i64 %2, i64* %6, align 8
+  %7 = load %"class.__gnu_cxx::new_allocator.21"*, %"class.__gnu_cxx::new_allocator.21"** %4, align 8
+  %8 = load %"struct.std::__detail::_Hash_node_base"**, %"struct.std::__detail::_Hash_node_base"*** %5, align 8
+  %9 = bitcast %"struct.std::__detail::_Hash_node_base"** %8 to i8*
+  call void @_ZdlPv(i8* %9) #12
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZNSt14pointer_traitsIPNSt8__detail10_Hash_nodeIjLb0EEEE10pointer_toERS2_(%"struct.std::__detail::_Hash_node"* dereferenceable(16)) #2 comdat align 2 {
+  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
+  %4 = call %"struct.std::__detail::_Hash_node"* @_ZSt9addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16) %3) #12
+  ret %"struct.std::__detail::_Hash_node"* %4
+}
+
+; Function Attrs: noinline optnone uwtable
+define linkonce_odr dso_local void @_ZNSt16allocator_traitsISaINSt8__detail10_Hash_nodeIjLb0EEEEE7destroyIjEEvRS3_PT_(%"class.std::allocator.5"* dereferenceable(1), i32*) #0 comdat align 2 {
+  %3 = alloca %"class.std::allocator.5"*, align 8
+  %4 = alloca i32*, align 8
+  store %"class.std::allocator.5"* %0, %"class.std::allocator.5"** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %5 = load %"class.std::allocator.5"*, %"class.std::allocator.5"** %3, align 8
+  %6 = bitcast %"class.std::allocator.5"* %5 to %"class.__gnu_cxx::new_allocator.6"*
+  %7 = load i32*, i32** %4, align 8
+  call void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE7destroyIjEEvPT_(%"class.__gnu_cxx::new_allocator.6"* %6, i32* %7)
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZSt9addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16)) #2 comdat {
+  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
+  %4 = call %"struct.std::__detail::_Hash_node"* @_ZSt11__addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16) %3) #12
+  ret %"struct.std::__detail::_Hash_node"* %4
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local %"struct.std::__detail::_Hash_node"* @_ZSt11__addressofINSt8__detail10_Hash_nodeIjLb0EEEEPT_RS3_(%"struct.std::__detail::_Hash_node"* dereferenceable(16)) #2 comdat {
+  %2 = alloca %"struct.std::__detail::_Hash_node"*, align 8
+  store %"struct.std::__detail::_Hash_node"* %0, %"struct.std::__detail::_Hash_node"** %2, align 8
+  %3 = load %"struct.std::__detail::_Hash_node"*, %"struct.std::__detail::_Hash_node"** %2, align 8
+  ret %"struct.std::__detail::_Hash_node"* %3
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define linkonce_odr dso_local void @_ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeIjLb0EEEE7destroyIjEEvPT_(%"class.__gnu_cxx::new_allocator.6"*, i32*) #2 comdat align 2 {
+  %3 = alloca %"class.__gnu_cxx::new_allocator.6"*, align 8
+  %4 = alloca i32*, align 8
+  store %"class.__gnu_cxx::new_allocator.6"* %0, %"class.__gnu_cxx::new_allocator.6"** %3, align 8
+  store i32* %1, i32** %4, align 8
+  %5 = load %"class.__gnu_cxx::new_allocator.6"*, %"class.__gnu_cxx::new_allocator.6"** %3, align 8
+  ret void
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable

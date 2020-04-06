@@ -15,15 +15,15 @@ void __countTaken(const char *functionName, unsigned int blockID) {
         blockVisited = new std::unordered_set<unsigned int>;
     }
 
-   if (!blockVisited->count(blockID)) {
-        if (!takenMap->count(functionName)) {
+    if (!blockVisited->count(blockID)) {
+        if (takenMap->count(functionName)) {
             (*takenMap)[functionName]++;
         } else {
             (*takenMap)[functionName] = 1;
         }
 
-       blockVisited->insert(blockID);
-   }
+        blockVisited->insert(blockID);
+    }
 }
 
 void __countTotal(const char *functionName, unsigned int totalCount) {
@@ -55,5 +55,5 @@ void __printResult() {
 
     delete takenMap;
     delete totalMap;
-  //  delete blockVisited;
+    //  delete blockVisited;
 }

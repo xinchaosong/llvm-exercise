@@ -93,7 +93,7 @@ namespace {
             CallInst::Create(hook)->insertBefore(I);
         }
 
-        static void InstrumentEnterCount(Value* opcodeValue, BasicBlock &blockToInstrument, Module &M) {
+        static void InstrumentEnterCount(Value *opcodeValue, BasicBlock &blockToInstrument, Module &M) {
             LLVMContext &Context = M.getContext();
 
             Type *voidTy = Type::getVoidTy(Context);
