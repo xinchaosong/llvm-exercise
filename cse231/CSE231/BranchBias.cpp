@@ -27,6 +27,7 @@ namespace {
             DenseMap<StringRef, Value *> functionNameMap;
             unsigned int blockID = 0;
 
+            // Sets up the hooks for the three instrumentation functions.
             setupHookCount(M, COUNT_TAKEN_FN);
             setupHookCount(M, COUNT_TOTAL_FN);
             setupHookPrint(M);
@@ -35,16 +36,18 @@ namespace {
             for (Function &F : functions) {
                 StringRef functionName = F.getName();
 
-                // Ignore any extern instrumentation functions
+                // Ignores any extern functions.
                 if (F.getBasicBlockList().empty()) {
                     continue;
                 }
 
+                // Ignores the instrumentation functions.
                 if (COUNT_TAKEN_FN == functionName || COUNT_TOTAL_FN == functionName
                     || RESULT_FN == functionName) {
                     continue;
                 }
 
+                // Inserts global constant C strings of function names.
                 IRBuilder<> builder(&F.front());
                 functionNameMap[functionName] = builder.CreateGlobalStringPtr(functionName, functionName);
 
@@ -55,6 +58,8 @@ namespace {
                     if (strcmp(bb.back().getOpcodeName(), "br") == 0 && bb.getInstList().size() > 1) {
                         Instruction *prevInstruction = bb.back().getPrevNonDebugInstruction();
 
+                        // If the current branch is conditional, inserts countTaken() function
+                        // and updates all parameters.
                         if (isConditionalBr) {
                             Value *blockIdValue = ConstantInt::get(Type::getInt32Ty(M.getContext()), blockID);
                             InstrumentEnterCount(COUNT_TAKEN_FN, functionNameMap[functionName], blockIdValue, bb, M);
@@ -63,15 +68,19 @@ namespace {
                             blockID++;
                         }
 
+                        // If the current instruction is "br" and its previous one is "icmp",
+                        // the a conditional branch is found.
                         if (strcmp(prevInstruction->getOpcodeName(), "icmp") == 0) {
                             isConditionalBr = true;
                         }
                     }
                 }
 
+                // Inserts countTotal() at the end of a function.
                 Value *countTotalValue = ConstantInt::get(Type::getInt32Ty(M.getContext()), countTotal);
                 InstrumentEnterCount(COUNT_TOTAL_FN, functionNameMap[functionName], countTotalValue, F.back(), M);
 
+                // Puts the result-printing function at the end of the main function.
                 if ("main" == F.getName()) {
                     InstrumentEnterPrint(F, M);
                 }

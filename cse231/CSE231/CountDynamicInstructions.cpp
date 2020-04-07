@@ -24,12 +24,14 @@ namespace {
 
         bool runOnModule(Module &M) override {
             DenseMap<StringRef, Value *> opcodeNameMap;
+
+            // Sets up the hooks for the two instrumentation functions.
             setupHookCount(M);
             setupHookPrint(M);
 
             Module::FunctionListType &functions = M.getFunctionList();
             for (Function &F : functions) {
-                // Ignore our instrumentation function
+                // Ignores the instrumentation functions.
                 if (COUNT_TAKEN_FN == F.getName() || RESULT_FN == F.getName()) {
                     continue;
                 }
@@ -37,10 +39,12 @@ namespace {
                 for (BasicBlock &bb : F) {
                     std::vector<StringRef> opcodeNameVec;
 
+                    // Lists the opcode names for all instructions in the current block.
                     for (Instruction &i : bb) {
                         opcodeNameVec.emplace_back(i.getOpcodeName());
                     }
 
+                    // Inserts instrumentation function based on the opcode names found.
                     for (StringRef opcodeName : opcodeNameVec) {
 
                         if (!opcodeNameMap.count(opcodeName)) {
@@ -52,11 +56,13 @@ namespace {
                     }
                 }
 
+                // Puts the result-printing function at the end of the main function.
                 if ("main" == F.getName()) {
                     InstrumentEnterPrint(F, M);
                 }
             }
 
+            // Returns true since we modified the program.
             return true;
         }
 

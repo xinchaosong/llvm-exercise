@@ -37,10 +37,10 @@ namespace {
                 }
             }
 
+            // Prints the analysis results.
             for (auto &pair: opcodeMap) {
                 errs() << pair.first << "\t" << pair.second << "\n";
             }
-
             errs() << "TOTAL\t" << totalCount << "\n";
 
             return false;

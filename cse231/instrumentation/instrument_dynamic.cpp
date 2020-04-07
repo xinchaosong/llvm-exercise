@@ -4,6 +4,10 @@
 static std::map<std::string, unsigned int> *opcodeMap = nullptr;
 static unsigned int totalCount = 0;
 
+/**
+ * Counts the opcode names
+ * @param opcodeName the name of an opcode
+ */
 void __count(const char *opcodeName) {
     if (opcodeMap == nullptr) {
         opcodeMap = new std::map<std::string, unsigned int>;
@@ -18,6 +22,9 @@ void __count(const char *opcodeName) {
     }
 }
 
+/**
+ * Prints the results.
+ */
 void __printResult() {
     for (auto &pair: *opcodeMap) {
         printf("%s\t%u\n", pair.first.c_str(), pair.second);
