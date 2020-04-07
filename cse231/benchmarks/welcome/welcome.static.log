@@ -1,0 +1,5 @@
+ret	1
+call	1
+alloca	1
+store	1
+TOTAL	4

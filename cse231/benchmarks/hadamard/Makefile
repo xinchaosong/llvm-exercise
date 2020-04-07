@@ -9,6 +9,8 @@ all: part1 part2 part3
 # Generates IR for the code to be analyzed
 $(source_ir): $(source_c)
 	clang -S -emit-llvm $(source_c)
+	clang -S -emit-llvm transform.c
+	llvm-link $(source_ir) transform.ll -S -o $(source_ir)
 
 # Part 1: Collecting Static Instruction Counts
 .PHONY: Part1

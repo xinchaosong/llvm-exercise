@@ -1,0 +1,27 @@
+miniz.c version: 9.1.15
+Compressed from 490 to 81 bytes
+Decompressed from 81 to 490 bytes
+Success.
+Function Bias Taken Total
+mz_adler32	0.75	3	4
+mz_deflateInit2	0.50	5	10
+mz_deflateEnd	0.50	1	2
+tdefl_init	1.00	1	1
+tdefl_create_comp_flags_from_zip_params	0.12	1	8
+mz_deflate	0.31	5	16
+tdefl_compress	0.52	17	33
+tdefl_flush_block	0.47	32	68
+tdefl_compress_lz_codes	0.78	18	23
+tdefl_start_dynamic_block	0.65	40	62
+tdefl_optimize_huffman_table	0.82	9	11
+tdefl_huffman_enforce_max_code_size	0.50	3	6
+tdefl_calculate_minimum_redundancy	0.92	12	13
+tdefl_radix_sort_syms	1.00	6	6
+tdefl_compress_normal	0.52	45	86
+tdefl_flush_output_buffer	0.75	3	4
+mz_deflateBound	1.00	1	1
+mz_inflateInit2	0.33	2	6
+mz_inflate	0.20	6	30
+tinfl_decompress	0.31	64	205
+mz_inflateEnd	0.50	1	2
+main	0.30	3	10
