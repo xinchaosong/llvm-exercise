@@ -1,2 +1,2 @@
 # LLVM Exercise
-Some exercise code for using LLVM
+Program-analysis projects using LLVM 9.01 for exercise.
