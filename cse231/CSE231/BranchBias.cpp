@@ -134,4 +134,4 @@ namespace {
 
 char BranchBias::ID = 0;
 static RegisterPass<BranchBias>
-        X("branch", "CSE 231 Part 3: Profiling Branch Bias");
+        X("branchbias", "CSE 231 Part 3: Profiling Branch Bias");
